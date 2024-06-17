@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
-  font-family: 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 html {
-  background-color: #c4ffe0;
+  background-color: #ffe2ef;
+  margin: 0;
+  padding: 0;
 }
 
 div.items {
   font-size: medium;
   margin: 10px;
   padding: 20px;
-  border: solid; 
-  background-color: aquamarine;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+div.items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 div.items > div {
@@ -20,46 +33,90 @@ div.items > div {
 
 .song {
   padding: 20px;
-  border: solid;
-  background-color: #00e489;
+  border-radius: 10px;
+  background-color: #ffc5e1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .song:hover {
-  background-color: #03d681;
+  background-color: #ff82a4;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 .lyrics {
   white-space: pre-line;
   width: 100%;
-  margin-left: 10px;
+  font-size: 16px;
 }
 
 #plus {
   margin-left: auto;
   margin-right: 20px;
   font-size: 30px;
+  color: #cf0041;
 }
 
 #songName {
   font-size: 18px;
-  align-items: center;
-  margin-left: 10px;
+  font-weight: bold;
+  margin-left: 20px;
+  color: #cf0041;
 }
 
 button {
-  padding: 20px;
+  padding: 15px 30px;
   margin: 10px;
-  flex-wrap: wrap;
-  border: solid;
+  border: none;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 18px;
-  background-color: #00a7e4;
+  font-size: 16px;
+  background-color: #cf0041;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #0382d6;
+  background-color: #b10041;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+button.multilineEnable {
+  background-color: #ff568b;
+  margin-bottom: 20px;
+}
+
+button.multilineEnable:hover {
+  background-color: #e83577;
+}
+
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.insideAcrdn {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }

@@ -43,7 +43,7 @@ export default function Accordion() {
                 <div className='id'> {entry.id} </div>
                 <div className='song' onClick={() => enableMultiselection ? handleMultipleSelections(entry.id) : handleSingleSelection(entry.id)}>
                   <p id='songName'>{entry.artist.map((name, i) => i === 0 ? name : ", " + name)} - {entry.song}</p>
-                  <span id='plus'>+</span>
+                  <span id='plus'><b>+</b></span>
                   <div className='lyrics'>{
                     (!enableMultiselection && selected === entry.id) || (enableMultiselection && multipleSelected.includes(entry.id)) ?
                       <div className="insideAcrdn">{entry.lyrics}</div>
