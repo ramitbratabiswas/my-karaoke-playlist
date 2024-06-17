@@ -1,0 +1,19 @@
+div.items {
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  padding: 20px;
+  display: inline-block;
+  border: solid; 
+  background-color: aquamarine;
+}
+
+div.items > div {
+  padding: 5px;
+}
+
+.song > p {
+  padding: 10px;
+  border: solid;
+  background-color: #00e489;
+}
