@@ -4,6 +4,8 @@
 import { useState } from "react";
 import { data } from './data.js';
 
+import { getLyrics, getSong } from 'genius-lyrics-api';
+
 export default function Accordion() {
 
   const [selected, setSelected] = useState(null);
@@ -29,6 +31,15 @@ export default function Accordion() {
     setMultipleSelected(newSelected);
     console.log(newSelected);
   }
+
+  const options = {
+    apiKey: 'XXXXXXXXXXXXXXXXXXXXXXX',
+    title: 'Posthumous Forgiveness',
+    artist: 'Tame Impala',
+    optimizeQuery: true
+  };
+  
+  getLyrics(options).then((lyrics) => console.log(lyrics));
 
   return (
     <div className="wrapper">
