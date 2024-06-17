@@ -1,9 +1,15 @@
+* {
+  font-family: 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  background-color: #c4ffe0;
+}
+
 div.items {
   font-size: medium;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 10px;
   padding: 20px;
-  display: inline-block;
   border: solid; 
   background-color: aquamarine;
 }
@@ -12,8 +18,48 @@ div.items > div {
   padding: 5px;
 }
 
-.song > p {
-  padding: 10px;
+.song {
+  padding: 20px;
   border: solid;
   background-color: #00e489;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.song:hover {
+  background-color: #03d681;
+}
+
+.lyrics {
+  white-space: pre-line;
+  width: 100%;
+  margin-left: 10px;
+}
+
+#plus {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+#songName {
+  font-size: 18px;
+  align-items: center;
+  margin-left: 10px;
+}
+
+button {
+  padding: 20px;
+  margin: 10px;
+  flex-wrap: wrap;
+  border: solid;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #00a7e4;
+}
+
+button:hover {
+  background-color: #0382d6;
 }
