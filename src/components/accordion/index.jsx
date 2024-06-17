@@ -1,6 +1,3 @@
-
-// ver ~SINGLE SELECT~
-
 import { useState } from "react";
 import { data } from './data.js';
 
