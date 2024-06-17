@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { data } from './data.js';
 
-import { getLyrics, getSong } from 'genius-lyrics-api';
+// import { getLyrics, getSong } from 'genius-lyrics-api';
 
 export default function Accordion() {
 
@@ -32,14 +32,14 @@ export default function Accordion() {
     console.log(newSelected);
   }
 
-  const options = {
-    apiKey: 'XXXXXXXXXXXXXXXXXXXXXXX',
-    title: 'Posthumous Forgiveness',
-    artist: 'Tame Impala',
-    optimizeQuery: true
-  };
+  // const options = {
+  //   apiKey: 'XXXXXXXXXXXXXXXXXXXXXXX',
+  //   title: 'Posthumous Forgiveness',
+  //   artist: 'Tame Impala',
+  //   optimizeQuery: true
+  // };
   
-  getLyrics(options).then((lyrics) => console.log(lyrics));
+  // getLyrics(options).then((lyrics) => console.log(lyrics));
 
   return (
     <div className="wrapper">
