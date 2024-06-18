@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { data } from './data.js';
+import fetchLyrics from "./fetchLyrics.js";
 
 export default function Accordion() {
 
@@ -43,7 +44,7 @@ export default function Accordion() {
                   <span id='plus'><b>+</b></span>
                   <div className='lyrics'>{
                     (!enableMultiselection && selected === entry.id) || (enableMultiselection && multipleSelected.includes(entry.id)) ?
-                      <div className="insideAcrdn">{entry.lyrics}</div>
+                      <div className="insideAcrdn">{fetchLyrics(entry.song, entry.artist)}</div>
                       : null
                   }</div>
                 </div>
