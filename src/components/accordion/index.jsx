@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { data } from './data.js';
 import { useFetchLyrics } from "./fetchLyrics.js";
 
