@@ -6,7 +6,7 @@ export default function Accordion() {
 
   const [selected, setSelected] = useState(-1);
 
-  let lyricData = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
+  let [lyricData, isLoading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
   
   function handleSingleSelection(currentId) {
     if (selected !== currentId) {
@@ -30,7 +30,7 @@ export default function Accordion() {
                   <div className='lyrics'>{
                     selected === entry.id ?
                       <div className="insideAcrdn">
-                        {lyricData ? lyricData : "lyrics unavailable :("}
+                        {isLoading ? "loading :(" : lyricData}
                       </div>
                       : null
                   }</div>
