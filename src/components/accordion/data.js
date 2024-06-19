@@ -15,6 +15,11 @@ export const data = [
     artist: ['Lexie Liu']
   },
   {
+    id: 4,
+    song: `Flashing Lights`,
+    artist: ['Kanye West', 'Dwele']
+  },
+  {
     id: 5,
     song: 'Good Luck, Babe!',
     artist: ['Chappell Roan']

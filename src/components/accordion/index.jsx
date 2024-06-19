@@ -1,50 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { data } from './data.js';
-import fetchLyrics from "./fetchLyrics.js";
+import { useFetchLyrics } from "./fetchLyrics.js";
 
 export default function Accordion() {
 
-  const [selected, setSelected] = useState(null);
-  const [enableMultiselection, setEnableMultiselection] = useState(false);
-  const [multipleSelected, setMultipleSelected] = useState([]);
+  const [selected, setSelected] = useState(-1);
 
-  function multiSelectionEnabler() {
-    setEnableMultiselection(!enableMultiselection);
-    setSelected(null);
-    setMultipleSelected([]);
-  }
-
-  function handleSingleSelection(currentId) {
-    console.log(currentId);
-    setSelected((selected === currentId) ? null : currentId);
-  }
+  let lyricData = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
   
-  function handleMultipleSelections(currentId) {
-    const newSelected = multipleSelected.includes(currentId) ? 
-      multipleSelected.filter(id => id !== currentId) : [...multipleSelected, currentId];
-
-    console.log(multipleSelected.includes(currentId));
-    setMultipleSelected(newSelected);
-    console.log(newSelected);
+  function handleSingleSelection(currentId) {
+    if (selected !== currentId) {
+      setSelected(() => currentId);
+    } else {
+      setSelected(() => -1);
+    }
   }
 
   return (
     <div className="wrapper">
-      <button className="multilineEnable" onClick={() => multiSelectionEnabler()}>
-        {enableMultiselection ? "Disable " : "Enable "} Multiselection
-      </button>
       <div className="accordion">
         {
           data && data.length > 0 ?
             data.map((entry) => (
               <div className='items' key={entry.id}>
                 <div className='id'> {entry.id} </div>
-                <div className='song' onClick={() => enableMultiselection ? handleMultipleSelections(entry.id) : handleSingleSelection(entry.id)}>
+                <div className='song' onClick={() => handleSingleSelection(entry.id)}>
                   <p id='songName'>{entry.artist.map((name, i) => i === 0 ? name : ", " + name)} - {entry.song}</p>
                   <span id='plus'><b>+</b></span>
                   <div className='lyrics'>{
-                    (!enableMultiselection && selected === entry.id) || (enableMultiselection && multipleSelected.includes(entry.id)) ?
-                      <div className="insideAcrdn">{fetchLyrics(entry.song, entry.artist)}</div>
+                    selected === entry.id ?
+                      <div className="insideAcrdn">
+                        {lyricData}
+                      </div>
                       : null
                   }</div>
                 </div>

@@ -11,6 +11,23 @@ html {
   padding: 0;
 }
 
+h1 {
+  color: #ff1369;
+  margin-left: 40px;
+  padding-top: 20px;
+  font-size: 48px;
+  margin-bottom: -10px;
+}
+
+h2 {
+  color: #ff1369;
+  margin-left: 40px;
+  padding-top: -20px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+}
+
 div.items {
   font-size: medium;
   margin: 10px;
@@ -27,7 +44,7 @@ div.items:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-div.items > div {
+div.items>div {
   padding: 5px;
 }
 
@@ -42,18 +59,17 @@ div.items > div {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   margin: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .song:hover {
   background-color: #ff82a4;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 .lyrics {
   white-space: pre-line;
   width: 100%;
   font-size: 16px;
+  padding-left: 10px;
 }
 
 #plus {
@@ -117,6 +133,11 @@ button.multilineEnable:hover {
   margin-top: 10px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
+}
+
+div.test {
+  color: #b10041;
+  font-size: xx-large;
+  white-space: pre-line;
 }
