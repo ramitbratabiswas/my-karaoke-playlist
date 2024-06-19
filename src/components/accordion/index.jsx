@@ -30,7 +30,7 @@ export default function Accordion() {
                   <div className='lyrics'>{
                     selected === entry.id ?
                       <div className="insideAcrdn">
-                        {lyricData}
+                        {lyricData ? lyricData : "lyrics unavailable :("}
                       </div>
                       : null
                   }</div>
