@@ -40,7 +40,6 @@ div.items {
 }
 
 div.items:hover {
-  transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -84,35 +83,6 @@ div.items>div {
   font-weight: bold;
   margin-left: 20px;
   color: #cf0041;
-}
-
-button {
-  padding: 15px 30px;
-  margin: 10px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: #cf0041;
-  color: white;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
-  background-color: #b10041;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
-}
-
-button.multilineEnable {
-  background-color: #ff568b;
-  margin-bottom: 20px;
-}
-
-button.multilineEnable:hover {
-  background-color: #e83577;
 }
 
 .wrapper {
