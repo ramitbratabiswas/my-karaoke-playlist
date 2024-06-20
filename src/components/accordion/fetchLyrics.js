@@ -27,7 +27,6 @@ export const useFetchLyrics = (song, artist) => {
     }).catch(error => error);
   }, [apiUrl]);
 
-  console.log("about to finish useFetchLyrics");
   return [lyrics, isLoading];
   
 }

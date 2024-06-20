@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { data } from './data.js';
 import { useFetchLyrics } from "./fetchLyrics.js";
+import { useFetchSpotify } from "./fetchSpotify.js";
 
 export default function Accordion() {
 
