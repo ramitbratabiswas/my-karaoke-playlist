@@ -1,9 +1,14 @@
 import { useState } from "react";
-import { data } from './data.js';
+// import { data } from './data.js';
 import { useFetchLyrics } from "./fetchLyrics.js";
 import { useFetchSpotify } from "./fetchSpotify.js";
 
 export default function Accordion() {
+
+  // useFetchSpotify();
+  // const playlistMusic = useFetchSpotify();
+  // console.log(`start of Accordion: ${playlistMusic[0].name}`);
+  const data = useFetchSpotify();
 
   const [selected, setSelected] = useState(-1);
 
