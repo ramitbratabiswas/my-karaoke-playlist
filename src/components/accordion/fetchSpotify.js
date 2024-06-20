@@ -36,7 +36,6 @@ export const useFetchSpotify = () => {
 
   useEffect(() => {
     const fetchPlaylistData = async () => {
-      console.log(`in fetchUserData`);
       if (!token) return null;
 
       try {
@@ -48,7 +47,6 @@ export const useFetchSpotify = () => {
         });
 
         const data = await res.json();
-        console.log(`await res.json: ${data.items[2].track.name}`);
         setPlaylistData(() => data.items.map((item, index) => {
           return { id: index + 1, song: item.track.name, artist: item.track.artists.map((artist) => artist.name) }
         }));
