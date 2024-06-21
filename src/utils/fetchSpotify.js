@@ -6,6 +6,8 @@ const tokenUrl = "https://accounts.spotify.com/api/token";
 
 const globalTop50Id = "37i9dQZEVXbMDoHDwVN2tF";
 const todaysTopHitsId = "37i9dQZF1DXcBWIGoYBM5M";
+const kpopOn = "37i9dQZF1DX9tPFwDMOaN1";
+const essentialIndie = "37i9dQZF1DX26DKvjp0s9M";
 const playlistUrl = "https://api.spotify.com/v1/playlists";
 
 export const useFetchSpotify = () => {
@@ -39,7 +41,7 @@ export const useFetchSpotify = () => {
       if (!token) return null;
 
       try {
-        const res = await fetch(`${playlistUrl}/${globalTop50Id}/tracks`, {
+        const res = await fetch(`${playlistUrl}/${essentialIndie}/tracks`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`
