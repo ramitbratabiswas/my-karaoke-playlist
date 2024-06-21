@@ -9,8 +9,9 @@ const placeHolder = 'https://www.musixmatch.com/lyrics/';
 
 export const useScrapeLyrics = (song, artist) => {
 
-  const artistString = artist.join('-').split(" ").join("-");
-  const songString = song.split(" ").join('-');
+  const artistString = artist.join('-').toLowerCase().split(" ").join("-");
+  const songString = song.toLowerCase().replaceAll(/[^a-zA-Z ]/g, '').replaceAll(' ','-');
+  console.log(`songString: ${songString}`);
 
   const url = `${corsProxy}${placeHolder}${artistString}/${songString}`;
   console.log(url);
@@ -41,7 +42,7 @@ export const useScrapeLyrics = (song, artist) => {
       }
     }
     fetchScrapedLyrics();
-  }, []);
+  }, [url]);
 
   return scrapedLyrics;
 }

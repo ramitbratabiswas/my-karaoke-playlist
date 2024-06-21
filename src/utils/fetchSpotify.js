@@ -48,7 +48,12 @@ export const useFetchSpotify = () => {
 
         const data = await res.json();
         setPlaylistData(() => data.items.map((item, index) => {
-          return { id: index + 1, song: item.track.name, artist: item.track.artists.map((artist) => artist.name) }
+          let songName = item.track.name;
+          if (songName.toLowerCase().includes('(feat')) {
+            let featIndex = songName.toLowerCase().indexOf('(feat');
+            songName = songName.substring(0, featIndex-1);
+          }
+          return { id: index + 1, song: songName, artist: item.track.artists.map((artist) => artist.name) }
         }));
 
       } catch (error) {
