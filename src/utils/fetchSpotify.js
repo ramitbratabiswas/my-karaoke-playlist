@@ -26,7 +26,7 @@ export const useFetchSpotify = () => {
         });
 
         const data = await res.json();
-        setToken(() => data.access_token)
+        setToken(() => data.access_token);
       } catch (error) {
         console.error(`catch clause error in fetchToken: ${error}`);
       }

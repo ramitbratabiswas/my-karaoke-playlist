@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { data } from './data.js';
-import { useFetchLyrics } from "./fetchLyrics.js";
-import { useFetchSpotify } from "./fetchSpotify.js";
+import { useFetchLyrics } from "../../utils/fetchLyrics.js";
+import { useFetchSpotify } from "../../utils/fetchSpotify.js";
+import { useScrapeLyrics } from "../../utils/scrapeLyrics.js";
 
 export default function Accordion() {
 
-  // useFetchSpotify();
   // const playlistMusic = useFetchSpotify();
   // console.log(`start of Accordion: ${playlistMusic[0].name}`);
+  // const dooWop = useScrapeLyrics();
+  // console.log(`inside index: ${dooWop}`);
   // const data = useFetchSpotify();
 
   const [selected, setSelected] = useState(-1);
@@ -36,7 +38,7 @@ export default function Accordion() {
                   <div className='lyrics'>{
                     selected === entry.id ?
                       <div className="insideAcrdn">
-                        {loading ? "loading..." : lyrics}
+                        {/* {loading ? "loading..." : lyrics} */}
                       </div>
                       : null
                   }</div>
