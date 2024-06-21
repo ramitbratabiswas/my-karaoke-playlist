@@ -8,14 +8,16 @@ export default function Accordion() {
 
   // const playlistMusic = useFetchSpotify();
   // console.log(`start of Accordion: ${playlistMusic[0].name}`);
-  // const dooWop = useScrapeLyrics();
+  // const scrapedLyrics = useScrapeLyrics("",[]);
   // console.log(`inside index: ${dooWop}`);
   // const data = useFetchSpotify();
 
   const [selected, setSelected] = useState(-1);
 
-  let [lyrics, loading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
-  
+  // let [lyrics, loading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
+  let lyrics = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
+
+
   function handleSingleSelection(currentId) {
     if (selected !== currentId) {
       setSelected(() => currentId);
@@ -38,7 +40,9 @@ export default function Accordion() {
                   <div className='lyrics'>{
                     selected === entry.id ?
                       <div className="insideAcrdn">
+                        {lyrics}
                         {/* {loading ? "loading..." : lyrics} */}
+                        {/* {scrapedLyrics} */}
                       </div>
                       : null
                   }</div>
