@@ -18,10 +18,12 @@ export const useScrapeLyrics = (song, artist) => {
   console.log(url);
 
   const [scrapedLyrics, setScrapedLyrics] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
 
-    setScrapedLyrics("");
+    setScrapedLyrics(() => "");
+    setIsLoading(() => true);
 
     const fetchScrapedLyrics = async () => {
       try {
@@ -38,6 +40,7 @@ export const useScrapeLyrics = (song, artist) => {
           finalLyrics += `${lyric}\n`;
         }
         setScrapedLyrics(() => finalLyrics);
+        setIsLoading(() => false);
       } catch (error) {
         console.error(`catch clause error in fetchScrapedLyrics: ${error}`);
       }
@@ -45,5 +48,5 @@ export const useScrapeLyrics = (song, artist) => {
     fetchScrapedLyrics();
   }, [url]);
 
-  return scrapedLyrics;
+  return [scrapedLyrics, isLoading];
 }

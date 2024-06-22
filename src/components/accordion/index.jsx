@@ -15,7 +15,7 @@ export default function Accordion() {
   const [selected, setSelected] = useState(-1);
 
   // let [lyrics, loading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
-  let lyrics = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
+  let [lyrics, loading] = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
   // let lyrics = useScrapeLyrics(`turn it up`,[`pinkpantheress`]);
 
   function handleSingleSelection(currentId) {
@@ -41,9 +41,7 @@ export default function Accordion() {
                   <div className='lyrics'>{
                     selected === entry.id ?
                       <div className="insideAcrdn">
-                        {lyrics}
-                        {/* {loading ? "loading..." : lyrics} */}
-                        {/* {scrapedLyrics} */}
+                        {loading ? "loading..." : lyrics}
                       </div>
                       : null
                   }</div>
