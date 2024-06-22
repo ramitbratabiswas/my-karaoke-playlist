@@ -41,7 +41,7 @@ export const useFetchSpotify = () => {
       if (!token) return null;
 
       try {
-        const res = await fetch(`${playlistUrl}/${essentialIndie}/tracks`, {
+        const res = await fetch(`${playlistUrl}/37i9dQZF1Epvjzh6N0ZAcU/tracks`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`

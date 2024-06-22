@@ -1,9 +1,9 @@
 {
-  "name": "spotify-top-songs-and-lyrics",
+  "name": "my-karaoke-playlist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ramitbratabiswas.github.io/spotify-top-songs-and-lyrics/",
+  "homepage": "https://ramitbratabiswas.github.io/my-karaoke-playlist/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
