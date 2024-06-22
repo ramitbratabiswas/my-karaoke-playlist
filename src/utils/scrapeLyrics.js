@@ -2,9 +2,6 @@ import * as cheerio from "cheerio";
 import { useState, useEffect } from "react";
 
 const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-const dooWop = 'https://www.musixmatch.com/lyrics/Ms-Lauryn-Hill/Doo-Wop-That-Thing';
-const toxic = 'https://www.musixmatch.com/lyrics/Britney-Spears/Toxic';
-const playNoGames = 'https://www.musixmatch.com/lyrics/Henry-Young-Ashley-Alisha/Play-No-Games';
 const placeHolder = 'https://www.musixmatch.com/lyrics/';
 
 export const useScrapeLyrics = (song, artist) => {

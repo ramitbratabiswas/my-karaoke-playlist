@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import { data } from './data.js';
 import { useFetchLyrics } from "../../utils/fetchLyrics.js";
-import { useFetchSpotify } from "../../utils/fetchSpotify.js";
+import { useFetchPlaylistData } from "../../utils/fetchPlaylistData.js";
 import { useScrapeLyrics } from "../../utils/scrapeLyrics.js";
 
 export default function Accordion() {
@@ -10,7 +10,7 @@ export default function Accordion() {
   // console.log(`start of Accordion: ${playlistMusic[0].name}`);
   // const scrapedLyrics = useScrapeLyrics("",[]);
   // console.log(`inside index: ${dooWop}`);
-  const data = useFetchSpotify();
+  const data = useFetchPlaylistData();
 
   const [selected, setSelected] = useState(-1);
 

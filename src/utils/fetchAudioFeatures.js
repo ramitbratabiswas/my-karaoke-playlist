@@ -4,37 +4,14 @@ const clientId = "392e275fa12640adbfad6a53c7c73965";
 const clientSecret = "eb0b7bc72fbf4ea88d7541fbec74e452";
 const tokenUrl = "https://accounts.spotify.com/api/token";
 
-const globalTop50Id = "37i9dQZEVXbMDoHDwVN2tF";
-const todaysTopHitsId = "37i9dQZF1DXcBWIGoYBM5M";
-const kpopOn = "37i9dQZF1DX9tPFwDMOaN1";
-const essentialIndie = "37i9dQZF1DX26DKvjp0s9M";
-const playlistUrl = "https://api.spotify.com/v1/playlists";
+const audioFeaturesUrl = "https://api.spotify.com/v1/audio-features";
 
 export const useFetchSpotify = () => {
 
   const [token, setToken] = useState("");
-  const [playlistData, setPlaylistData] = useState({});
+  const [audioFeatures, setAudioFeatures] = useState({});
 
   useEffect(() => {
-
-    const fetchToken = async () => {
-      try {
-        const res = await fetch(tokenUrl, {
-          method: "POST",
-          headers: {
-            "Content-type": "application/x-www-form-urlencoded"
-          },
-          body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`
-        });
-
-        const data = await res.json();
-        setToken(() => data.access_token);
-      } catch (error) {
-        console.error(`catch clause error in fetchToken: ${error}`);
-      }
-    }
-    fetchToken();
-  },[]);
 
   useEffect(() => {
     const fetchPlaylistData = async () => {
