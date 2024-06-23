@@ -8,6 +8,7 @@ export default function Accordion() {
   const data = useFetchPlaylistData();
 
   const [selected, setSelected] = useState(-1);
+
   // let [lyrics, loading] = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
   let [lyrics, loading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
 
