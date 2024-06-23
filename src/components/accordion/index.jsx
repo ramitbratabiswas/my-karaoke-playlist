@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { data } from './data.js';
-// import { useFetchLyrics } from "../../utils/fetchLyrics.js";
 import { useFetchPlaylistData } from "../../utils/fetchPlaylistData.js";
 import { useScrapeLyrics } from "../../utils/scrapeLyrics.js";
 
@@ -28,6 +26,7 @@ export default function Accordion() {
               <div className='items' key={entry.id}>
                 <div className='id'> {entry.id} </div>
                 <div className='song' onClick={() => handleSingleSelection(entry.id)}>
+                  <img className='albumArt' src={entry.image}/>
                   <p id='songName'>{entry.artist.map((name, i) => i === 0 ? name : ", " + name)} - {entry.song}</p>
                   <p id='artists'></p>
                   <span id='plus'><b>+</b></span>
