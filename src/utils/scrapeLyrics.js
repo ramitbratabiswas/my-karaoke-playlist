@@ -25,7 +25,7 @@ export const useScrapeLyrics = (song, artist) => {
           method: "GET",
         });
 
-        if (page.status === 404) {
+        if (!page.ok) {
           setScrapedLyrics(() => "sorry, we couldn't find the lyrics for this one :(");
           setIsLoading(() => false);
           return;

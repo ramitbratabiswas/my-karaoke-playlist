@@ -62,10 +62,11 @@ div.items>div {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   width: 100%;
   margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .song:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
   transition: transform 0.2s ease;
 }
@@ -81,7 +82,7 @@ div.items>div {
 .lyrics {
   white-space: pre-line;
   width: 100%;
-  font-size: clamp(14px, 2.5vmin, 20px);
+  font-size: clamp(16px, 2.5vmin, 20px);
   padding-left: 10px;
   line-height: 180%;
 }
@@ -95,7 +96,7 @@ div.items>div {
 }
 
 #songName {
-  font-size: clamp(20px, 6vw, 56px);
+  font-size: clamp(20px, 6vw, 64px);
   font-weight: bold;
   margin-bottom: -0.2vw;
   margin-top: -0.1vw;
