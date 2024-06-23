@@ -9,11 +9,12 @@ const playlistUrl = "https://api.spotify.com/v1/playlists";
 
 export const useFetchPlaylistData = () => {
 
-  const [playlistData, setPlaylistData] = useState({});
+  const [playlistData, setPlaylistData] = useState([]);
   const token = useFetchSpotifyToken();
 
   useEffect(() => {
     const fetchPlaylistData = async () => {
+      
       if (!token) return null;
 
       try {
@@ -27,11 +28,12 @@ export const useFetchPlaylistData = () => {
         const data = await res.json();
         setPlaylistData(() => data.items.map((item, index) => {
           let songName = item.track.name;
+          let songId = item.track.id;
           if (songName.toLowerCase().includes('(feat')) {
             let featIndex = songName.toLowerCase().indexOf('(feat');
             songName = songName.substring(0, featIndex-1);
           }
-          return { id: index + 1, song: songName, artist: item.track.artists.map((artist) => artist.name) }
+          return { id: index + 1, song: songName, artist: item.track.artists.map((artist) => artist.name), trackId: songId }
         }));
 
       } catch (error) {
