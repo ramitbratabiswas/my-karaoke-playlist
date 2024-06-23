@@ -8,8 +8,7 @@ import './components/accordion/styles.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className='header'>
-      <h1>my karaoke playlist!</h1>
-      <h2>music by spotify, lyrics by musixmatch</h2>
+      <h1>my <span id='karaoke'>karaoke</span> playlist!</h1>
     </div>
     <Accordion />
   </React.StrictMode>,
