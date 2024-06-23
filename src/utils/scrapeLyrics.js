@@ -24,6 +24,13 @@ export const useScrapeLyrics = (song, artist) => {
         const page = await fetch(url, {
           method: "GET",
         });
+
+        if (page.status === 404) {
+          setScrapedLyrics(() => "sorry, we couldn't find the lyrics for this one :(");
+          setIsLoading(() => false);
+          return;
+        }
+
         const body = await page.text();
         const $ = await cheerio.load(body);
 
