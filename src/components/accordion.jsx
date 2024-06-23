@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useFetchPlaylistData } from "../../utils/fetchPlaylistData.js";
-import { useScrapeLyrics } from "../../utils/scrapeLyrics.js";
-import { useFetchLyrics } from "../../utils/fetchLyrics.js"
+import { useFetchPlaylistData } from "../utils/fetchPlaylistData.js";
+import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
+import { useFetchLyrics } from "../utils/fetchLyrics.js"
 
 export default function Accordion() {
 
