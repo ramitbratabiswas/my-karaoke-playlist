@@ -27,8 +27,10 @@ export default function Accordion() {
                 <div className='id'> {entry.id} </div>
                 <div className='song' onClick={() => handleSingleSelection(entry.id)}>
                   <img className='albumArt' src={entry.image}/>
-                  <p id='songName'>{entry.artist.map((name, i) => i === 0 ? name : ", " + name)} - {entry.song}</p>
-                  <p id='artists'></p>
+                  <div>
+                    <p id='songName'>{entry.song}</p>
+                    <p id='artists'>{entry.artist.map((name, i) => i === 0 ? name : ", " + name)}</p>
+                  </div>
                   <span id='plus'><b>+</b></span>
                   <div className='lyrics'>{
                     selected === entry.id ?

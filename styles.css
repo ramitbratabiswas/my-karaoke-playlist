@@ -15,7 +15,7 @@ h1 {
   color: #ff1369;
   margin-left: 40px;
   padding-top: 20px;
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: -10px;
 }
 
@@ -23,7 +23,7 @@ h2 {
   color: #ff1369;
   margin-left: 40px;
   padding-top: -20px;
-  font-size: 18px;
+  font-size: 24px;
   font-style: italic;
   font-weight: normal;
 }
@@ -64,6 +64,14 @@ div.items>div {
   background-color: #ff82a4;
 }
 
+.albumArt {
+  width: 20%;
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .lyrics {
   white-space: pre-line;
   width: 100%;
@@ -79,10 +87,18 @@ div.items>div {
 }
 
 #songName {
-  font-size: 18px;
+  font-size: 36px;
   font-weight: bold;
   margin-left: 20px;
   color: #cf0041;
+  width: 100%;
+}
+
+#artists {
+  font-size: 20px;
+  margin-left: 20px;
+  color: #cf0041;
+  width: 100%;
 }
 
 .wrapper {
