@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @media only screen and (max-width: 600px) {
-
   #songName { 
-     font-size: 3vw; 
+    font-size: 3vw; 
   }
-
 }
 
 * {
@@ -20,23 +18,22 @@ html {
 }
 
 h1 {
-  color: #ffd3e9;
+  color: rgb(255, 200, 228);
   margin: 0px 40px;
-  text-align: right;
   padding-top: 20px;
-  font-size: 28px;
+  font-size: clamp(20px, 2vw, 28px);
 }
 
 #karaoke {
-  color: rgb(255, 79, 120);
+  color: rgb(255, 79, 149);
 }
 
 div.items {
-  font-size: medium;
+  font-size: clamp(14px, 1.5vw, medium);
   margin: 10px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #ffc6db;
+  background-color: rgb(255, 200, 228);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
@@ -50,6 +47,11 @@ div.items>div {
   padding: 5px;
 }
 
+.id {
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: bold;
+}
+
 .song {
   border-radius: 10px;
   background-color: hotpink;
@@ -57,7 +59,7 @@ div.items>div {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   width: 100%;
   margin: 10px 0;
 }
@@ -69,17 +71,17 @@ div.items>div {
 }
 
 .albumArt {
-  width: 20%;
+  width: clamp(50px, 20%, 140px);
   display: inline-block;
   position: relative;
   margin: 1.5vw;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 }
 
 .lyrics {
   white-space: pre-line;
   width: 100%;
-  font-size: 2.5vmin;
+  font-size: clamp(14px, 2.5vmin, 20px);
   padding-left: 10px;
   line-height: 180%;
 }
@@ -93,10 +95,10 @@ div.items>div {
 }
 
 #songName {
-  font-size: 6vw;
+  font-size: clamp(20px, 6vw, 56px);
   font-weight: bold;
   margin-bottom: -0.2vw;
-  margin-top: -0.2vw;
+  margin-top: -0.1vw;
   color: #000000;
   text-align: right;
   overflow: hidden;
@@ -105,14 +107,14 @@ div.items>div {
 }
 
 #artists {
-  font-size: 2.5vw;
-  margin-top: -2px;
+  font-size: clamp(12px, 2.5vw, 28px);
+  margin-top: -0.1vw;
   color: black;
   text-align: right;
   margin-right: 0.3vw;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100% - 40px;
+  width: 100%;
 }
 
 .wrapper {
@@ -138,6 +140,6 @@ div.items>div {
 
 div.test {
   color: #004d40;
-  font-size: xx-large;
+  font-size: clamp(18px, 4vw, 32px); /* Added clamp */
   white-space: pre-line;
 }
