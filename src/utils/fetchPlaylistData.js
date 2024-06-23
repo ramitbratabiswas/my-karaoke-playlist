@@ -18,7 +18,7 @@ export const useFetchPlaylistData = () => {
       if (!token) return null;
 
       try {
-        const res = await fetch(`${playlistUrl}/37i9dQZF1Epvjzh6N0ZAcU/tracks`, {
+        const res = await fetch(`${playlistUrl}/62dlyeJn7ZCFItWxsOK3bc/tracks`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`
