@@ -3,13 +3,10 @@ import { useState } from "react";
 // import { useFetchLyrics } from "../../utils/fetchLyrics.js";
 import { useFetchPlaylistData } from "../../utils/fetchPlaylistData.js";
 import { useScrapeLyrics } from "../../utils/scrapeLyrics.js";
-import { useFetchKaraokenessForPlaylist } from "../../utils/fetchKaraokenessForPlaylist.js";
 
 export default function Accordion() {
 
   const data = useFetchPlaylistData();
-  console.log("data.length: " + data.length);
-  const dataWithKaraokeness = useFetchKaraokenessForPlaylist(data);
 
   const [selected, setSelected] = useState(-1);
   let [lyrics, loading] = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
