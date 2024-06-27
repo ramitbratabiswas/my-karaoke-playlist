@@ -6,17 +6,17 @@ export default function SpotifyPlaylists() {
   useRefreshImages();
 
   return (
-
-    <div className="wrapper">
+    <div className="">
       <div className="playlistList">
         {playlists.map((playlist, index) => {
           return (<>
-            <div key={index} className="playlistNames">
-              <p>{playlist.name}</p>
-              <p>{playlist.description}</p>
-              <p>{playlist.id}</p>
-              <img src={playlist.image}/>
-            </div>
+            {/* <a href={`https://open.spotify.com/playlist/${playlist.id}`}> */}
+              <div key={index} className="playlistCards">
+                <img className="playlist-image" src={playlist.image} />
+                <p className="playlist-name">{playlist.name}</p>
+                <p className="playlist-description">{playlist.description}</p>
+              </div>
+            {/* </a> */}
           </>);
         })}
       </div>

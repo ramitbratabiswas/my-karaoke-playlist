@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { useFetchPlaylistData } from "../utils/fetchPlaylistData.js";
-// import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
+import { playlists } from "../data/playlists.js";
+import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
 import { useFetchLyrics } from "../utils/fetchLyrics.js"
 
 export default function Accordion() {
 
   const onRepeat = "37i9dQZF1Epvjzh6N0ZAcU";
 
-  const data = useFetchPlaylistData(onRepeat);
+  const data = useFetchPlaylistData(playlists[2].id);
 
   const [selected, setSelected] = useState(-1);
 
-  // let [lyrics, loading] = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
-  let [lyrics, loading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
+  let [lyrics, loading] = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
+  // let [lyrics, loading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
 
   function handleSingleSelection(currentId) {
     if (selected !== currentId) {

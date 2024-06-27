@@ -17,6 +17,11 @@ html {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   color: rgb(255, 200, 228);
   font-size: clamp(20px, 2vw, 28px);
@@ -149,5 +154,44 @@ div.test {
 }
 
 .playlistList {
-  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.playlistCards {
+  background-color: rgb(23, 181, 120);
+  border-radius: 8px;
+  padding: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.playlistCards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.playlist-image {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.playlist-name {
+  font-size: clamp(20px, 2vw, 30px);
+  font-weight: bold;
+  padding: 15px 5px 5px 5px;
+  margin: 0;
+}
+
+.playlist-description {
+  font-size: clamp(14px, 1.4vw, 21px);
+  padding: 5px;
+  margin: 0;
 }

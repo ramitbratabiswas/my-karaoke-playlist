@@ -1,13 +1,13 @@
 export const playlists = [{
     name: "Top 50 - Global",
     id: "37i9dQZEVXbMDoHDwVN2tF",
-    description: "Your daily update of the most played tracks right now - Global.",
+    description: "The most played tracks right now - Global.",
     image: ""
   },
   {
     name: "Today's Top Hits",
     id: "37i9dQZF1DXcBWIGoYBM5M",
-    description:"The 50 best from the world of music. Always fresh and always brand new.",
+    description:"The 50 best from the world of music.",
     image: ""
   },
   {

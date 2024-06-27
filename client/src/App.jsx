@@ -5,13 +5,13 @@ import SpotifyPlaylists from './components/spotifyplaylists.jsx';
 export const App = () => {
   return (
     <>
-      <SpotifyPlaylists />
-      {/* <div className='navbar'>
+      <div className='navbar'>
         <Navbar />
-      </div> */}
-      {/* <div className='accordion'>
+      </div>
+      <SpotifyPlaylists />
+      <div className='accordion'>
         <Accordion />
-      </div> */}
+      </div>
     </>
   );
 }
