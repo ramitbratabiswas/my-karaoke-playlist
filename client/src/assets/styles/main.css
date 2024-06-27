@@ -147,3 +147,7 @@ div.test {
   font-size: clamp(18px, 4vw, 32px); /* Added clamp */
   white-space: pre-line;
 }
+
+.playlistList {
+  color: white;
+}
