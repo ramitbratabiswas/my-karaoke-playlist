@@ -5,7 +5,13 @@ import { useFetchLyrics } from "../utils/fetchLyrics.js"
 
 export default function Accordion() {
 
-  const data = useFetchPlaylistData();
+  const globalTop50Id = "37i9dQZEVXbMDoHDwVN2tF";
+  const todaysTopHitsId = "37i9dQZF1DXcBWIGoYBM5M";
+  const kpopOn = "37i9dQZF1DX9tPFwDMOaN1";
+  const essentialIndie = "37i9dQZF1DX26DKvjp0s9M";
+  const onRepeat = "37i9dQZF1Epvjzh6N0ZAcU";
+
+  const data = useFetchPlaylistData(onRepeat);
 
   const [selected, setSelected] = useState(-1);
 

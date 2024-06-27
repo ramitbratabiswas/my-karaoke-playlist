@@ -19,9 +19,12 @@ html {
 
 h1 {
   color: rgb(255, 200, 228);
+  font-size: clamp(20px, 2vw, 28px);
+}
+
+.navbar {
   margin: 0px 40px;
   padding-top: 20px;
-  font-size: clamp(20px, 2vw, 28px);
 }
 
 #karaoke {
