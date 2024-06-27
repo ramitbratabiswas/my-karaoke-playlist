@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { useFetchPlaylistData } from "../utils/fetchPlaylistData.js";
-import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
+// import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
 import { useFetchLyrics } from "../utils/fetchLyrics.js"
 
 export default function Accordion() {
 
-  const globalTop50Id = "37i9dQZEVXbMDoHDwVN2tF";
-  const todaysTopHitsId = "37i9dQZF1DXcBWIGoYBM5M";
-  const kpopOn = "37i9dQZF1DX9tPFwDMOaN1";
-  const essentialIndie = "37i9dQZF1DX26DKvjp0s9M";
   const onRepeat = "37i9dQZF1Epvjzh6N0ZAcU";
 
   const data = useFetchPlaylistData(onRepeat);
