@@ -27,7 +27,7 @@ h1 {
   font-size: clamp(20px, 2vw, 28px);
 }
 
-.navbar {
+.header {
   margin: 0px 40px;
   padding-top: 20px;
 }

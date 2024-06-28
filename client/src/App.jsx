@@ -7,15 +7,17 @@ import UserPlaylists from './components/userPlaylists.jsx';
 import { playlists } from './data/playlists.js';
 
 import './assets/styles/main.css'
+import Frontpage from './pages/frontpage.jsx';
 
 export const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/1" element={<SpotifyPlaylists />} />
-        <Route path="/2" element={<UserPlaylists />} />
-        <Route path="/3" element={<Accordion playlistId={playlists[0].id} />} />
+        <Route path="/" element={<Frontpage/>}/>
+        <Route path="/spotifyplaylists" element={<SpotifyPlaylists />} />
+        <Route path="/userplaylists" element={<UserPlaylists />} />
+        <Route path="/lyrics/:id" element={<Accordion />} />
       </Routes>
     </>
   );
