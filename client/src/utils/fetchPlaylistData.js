@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useFetchSpotifyToken } from "./fetchSpotifyToken.js";
 
-export const useFetchPlaylistData = (playlistId) => {
+export const useFetchPlaylistData = (id) => {
 
   const [playlistData, setPlaylistData] = useState([]);
   const token = useFetchSpotifyToken();
@@ -12,7 +12,7 @@ export const useFetchPlaylistData = (playlistId) => {
       if (!token) return null;
 
       try {
-        const res = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=30`, {
+        const res = await fetch(`https://api.spotify.com/v1/playlists/${id}/tracks?limit=50`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`

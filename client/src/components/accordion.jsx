@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { useFetchPlaylistData } from "../utils/fetchPlaylistData.js";
-import { playlists } from "../data/playlists.js";
 import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
 import { useFetchLyrics } from "../utils/fetchLyrics.js"
 import { useParams } from "react-router-dom";
 
 export default function Accordion() {
-
-  const onRepeat = "37i9dQZF1Epvjzh6N0ZAcU";
 
   const { id } = useParams();
   const data = useFetchPlaylistData(id);
