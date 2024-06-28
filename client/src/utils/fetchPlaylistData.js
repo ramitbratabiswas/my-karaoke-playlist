@@ -12,7 +12,7 @@ export const useFetchPlaylistData = (id) => {
       if (!token) return null;
 
       try {
-        const res = await fetch(`https://api.spotify.com/v1/playlists/${id}/tracks?limit=50`, {
+        const res = await fetch(`https://api.spotify.com/v1/playlists/${id}/tracks`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`

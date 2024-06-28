@@ -26,8 +26,7 @@ export const useFetchUserPlaylists = () => {
             name: item.name,
             id: item.id,
             imgUrl: item.images[0].url,
-            description: item.description,
-            total: item.tracks.total
+            description: item.description
           }
         });
         setUserPlaylists(() => playlists);

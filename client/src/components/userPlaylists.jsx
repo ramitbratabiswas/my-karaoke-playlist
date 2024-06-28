@@ -15,7 +15,6 @@ export default function UserPlaylists() {
                 <img className="playlist-image" src={playlist.imgUrl} />
                 <p className="playlist-name">{playlist.name}</p>
                 <p className="playlist-description">{playlist.description}</p>
-                <p className="playlist-description">{playlist.total}</p>
               </div>
             </Link>
           </>);
