@@ -170,16 +170,23 @@ div.test {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+#userCard {
+  background-color: rgb(74, 110, 231);
+}
+
 .playlistCards:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .playlist-image {
+  aspect-ratio: 1/1;
   width: 100%;
   border-radius: 8px;
-  height: auto;
   display: block;
+  object-fit: cover;
+  overflow: none;
+  object-position: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -188,6 +195,10 @@ div.test {
   font-weight: bold;
   padding: 15px 5px 5px 5px;
   margin: 0;
+  word-wrap: break-word;
+  overflow: hidden;
+  hyphens: auto;
+  text-overflow:clip;
 }
 
 .playlist-description {

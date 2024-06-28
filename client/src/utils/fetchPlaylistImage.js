@@ -8,7 +8,6 @@ export const useFetchPlaylistImage = (playlistId) => {
 
   useEffect(() => {
     const fetchPlaylistImage = async () => {
-      console.log("in fetchPlaylistImage");
       
       if (!token) return null;
 
