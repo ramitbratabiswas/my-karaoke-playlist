@@ -8,7 +8,6 @@ export default function Accordion() {
 
   const { id } = useParams();
   const { name, tracks } = useFetchPlaylistData(id);
-  console.log("tracks: " + tracks);
 
   const [selected, setSelected] = useState(-1);
 

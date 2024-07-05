@@ -45,14 +45,13 @@ export const useFetchPlaylistData = (id) => {
           return { id: index + 1, song: songName, artist: item.track.artists.map((artist) => artist.name), trackId: songId, image: songImage }
         });
 
-        const updatedTracks = totalTracks > 100
+        let updatedTracks = totalTracks > 100
           ? tracks.reverse().map((track, index) => ({
               ...track,
-              id: 101 - index
+              id: 101 - track.id
             }))
           : tracks;
 
-        // Update the state with both playlist name and tracks
         setPlaylistData({
           name: playlistName,
           tracks: updatedTracks
