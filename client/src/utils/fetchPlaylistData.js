@@ -7,6 +7,7 @@ export const useFetchPlaylistData = (id) => {
   const token = useFetchSpotifyToken();
 
   useEffect(() => {
+
     const fetchPlaylistData = async () => {
       
       if (!token) return;
@@ -41,19 +42,22 @@ export const useFetchPlaylistData = (id) => {
             let featIndex = songName.toLowerCase().indexOf('(feat');
             songName = songName.substring(0, featIndex - 1);
           }
+          console.log(songName);
           return { id: index + 1, song: songName, artist: item.track.artists.map((artist) => artist.name), trackId: songId, image: songImage }
         });
 
-        // Reverse the order of tracks
         if (totalTracks > 100) {
-          setPlaylistData(tracks.reverse());
-          setPlaylistData(tracks.map(track => (
+          const updatedTracks = tracks.reverse().map((track, index) => (
             {
               ...track,
-              id: 101 - track.id
+              id: 101 - index
             }
-          )));
+          ));
+          setPlaylistData(updatedTracks);
+        } else {
+          setPlaylistData(tracks);
         }
+
 
       } catch (error) {
         console.error(`catch clause error in fetchPlaylistData: ${error}`);

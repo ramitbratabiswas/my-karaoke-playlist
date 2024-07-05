@@ -7,7 +7,7 @@ export default function UserPlaylists() {
 
   return (
     <div>
-      <h1 className="list-heading">Your playlists</h1>
+      <h1 className="list-heading" id="your-playlists-heading">Your playlists</h1>
       <div className="playlistList">
         {userPlaylists.map((playlist, index) => {
           return (<>

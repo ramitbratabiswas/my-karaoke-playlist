@@ -33,14 +33,46 @@ h1 {
 }
 
 .list-heading {
-  margin: 60px 40px 20px 20px;
+  margin: 40px 40px 20px 20px;
   font-weight: 600;
   font-size: clamp(48px, 6vw, 72px);
   color: white;
 }
 
-#karaoke {
-  color: rgb(255, 79, 149);
+.primary-blue {
+  color:rgb(74, 110, 231);
+}
+
+.primary-green {
+  color:rgb(23, 181, 120);
+}
+
+.secondary-pink {
+  color:rgb(255, 200, 228);
+}
+
+.secondary-blue {
+  color:rgb(166, 185, 243);
+}
+
+#your-playlists-heading {
+  color:rgb(195, 208, 246);
+}
+
+.secondary-green {
+  color:rgb(106, 238, 187);
+}
+
+#spotify-playlists-heading {
+  color:rgb(219, 255, 241);
+}
+
+.primary-pink {
+  color:hotpink;
+}
+
+.primary-white {
+  color: white;
 }
 
 div.items {

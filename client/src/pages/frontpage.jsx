@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Frontpage() {
+export default function Frontpage({ colorClass }) {
   return (
     <div>
       <h1>Home</h1>
