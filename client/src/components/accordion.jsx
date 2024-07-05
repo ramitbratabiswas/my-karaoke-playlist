@@ -7,12 +7,13 @@ import { useParams } from "react-router-dom";
 export default function Accordion() {
 
   const { id } = useParams();
-  const data = useFetchPlaylistData(id);
+  const { name, tracks } = useFetchPlaylistData(id);
+  console.log("tracks: " + tracks);
 
   const [selected, setSelected] = useState(-1);
 
-  // let [lyrics, loading] = useScrapeLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
-  let [lyrics, loading] = useFetchLyrics(selected > 0 ? data[selected-1].song : "", selected > 0 ? data[selected-1].artist : []);
+  // let [lyrics, loading] = useScrapeLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
+  let [lyrics, loading] = useFetchLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
 
   function handleSingleSelection(currentId) {
     if (selected !== currentId) {
@@ -23,11 +24,12 @@ export default function Accordion() {
   }
 
   return (
-    <div className="wrapper">
-      <div className="accordion">
+    <div>
+      <h1 className="list-heading" id="playlist-name-heading">{name}</h1>
+      <div className="wrapper accordion">
         {
-          data && data.length > 0 ?
-            data.map((entry) => (
+          tracks && tracks.length > 0 ?
+            tracks.map((entry) => (
               <div className='items' key={entry.id}>
                 <div className='id'> {entry.id} </div>
                 <div className='song' onClick={() => handleSingleSelection(entry.id)}>

@@ -23,7 +23,6 @@ a {
 }
 
 h1 {
-  color: rgb(255, 200, 228);
   font-size: clamp(20px, 2vw, 28px);
 }
 
@@ -36,7 +35,6 @@ h1 {
   margin: 40px 40px 20px 20px;
   font-weight: 600;
   font-size: clamp(48px, 6vw, 72px);
-  color: white;
 }
 
 .primary-blue {
@@ -48,6 +46,10 @@ h1 {
 }
 
 .secondary-pink {
+  color:rgb(255, 150, 204);
+}
+
+#playlist-name-heading {
   color:rgb(255, 200, 228);
 }
 
@@ -169,7 +171,6 @@ div.items>div {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .accordion {

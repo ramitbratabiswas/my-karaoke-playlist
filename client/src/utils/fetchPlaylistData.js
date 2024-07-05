@@ -2,18 +2,17 @@ import { useState, useEffect } from "react";
 import { useFetchSpotifyToken } from "./fetchSpotifyToken.js";
 
 export const useFetchPlaylistData = (id) => {
-
-  const [playlistData, setPlaylistData] = useState([]);
+  const [playlistData, setPlaylistData] = useState({
+    name: '',
+    tracks: []
+  });
   const token = useFetchSpotifyToken();
 
   useEffect(() => {
-
     const fetchPlaylistData = async () => {
-      
       if (!token) return;
 
       try {
-        
         const playlistRes = await fetch(`https://api.spotify.com/v1/playlists/${id}`, {
           method: "GET",
           headers: {
@@ -23,9 +22,10 @@ export const useFetchPlaylistData = (id) => {
 
         const playlistData = await playlistRes.json();
         const totalTracks = playlistData.tracks.total;
-        
+        const playlistName = playlistData.name;
+
         const offset = Math.max(totalTracks - 100, 0);
-        
+
         const res = await fetch(`https://api.spotify.com/v1/playlists/${id}/tracks?offset=${offset}&limit=100`, {
           method: "GET",
           headers: {
@@ -42,27 +42,27 @@ export const useFetchPlaylistData = (id) => {
             let featIndex = songName.toLowerCase().indexOf('(feat');
             songName = songName.substring(0, featIndex - 1);
           }
-          console.log(songName);
           return { id: index + 1, song: songName, artist: item.track.artists.map((artist) => artist.name), trackId: songId, image: songImage }
         });
 
-        if (totalTracks > 100) {
-          const updatedTracks = tracks.reverse().map((track, index) => (
-            {
+        const updatedTracks = totalTracks > 100
+          ? tracks.reverse().map((track, index) => ({
               ...track,
               id: 101 - index
-            }
-          ));
-          setPlaylistData(updatedTracks);
-        } else {
-          setPlaylistData(tracks);
-        }
+            }))
+          : tracks;
 
+        // Update the state with both playlist name and tracks
+        setPlaylistData({
+          name: playlistName,
+          tracks: updatedTracks
+        });
 
       } catch (error) {
         console.error(`catch clause error in fetchPlaylistData: ${error}`);
       }
     }
+
     fetchPlaylistData();
   }, [token, id]);
 
