@@ -28,8 +28,15 @@ h1 {
 }
 
 .header {
-  margin: 0px 40px;
-  padding-top: 20px;
+  margin: 0px 20px;
+  padding-top: 10px;
+}
+
+.list-heading {
+  margin: 60px 40px 20px 20px;
+  font-weight: 600;
+  font-size: clamp(48px, 6vw, 72px);
+  color: white;
 }
 
 #karaoke {

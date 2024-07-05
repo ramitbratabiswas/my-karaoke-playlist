@@ -8,6 +8,7 @@ export default function SpotifyPlaylists() {
 
   return (
     <div>
+      <h1 class="list-heading">popular on spotify right now</h1>
       <div className="playlistList">
         {playlists.map((playlist, index) => {
           return (<>

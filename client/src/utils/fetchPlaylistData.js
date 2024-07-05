@@ -9,10 +9,23 @@ export const useFetchPlaylistData = (id) => {
   useEffect(() => {
     const fetchPlaylistData = async () => {
       
-      if (!token) return null;
+      if (!token) return;
 
       try {
-        const res = await fetch(`https://api.spotify.com/v1/playlists/${id}/tracks`, {
+        
+        const playlistRes = await fetch(`https://api.spotify.com/v1/playlists/${id}`, {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`
+          }
+        });
+
+        const playlistData = await playlistRes.json();
+        const totalTracks = playlistData.tracks.total;
+        
+        const offset = Math.max(totalTracks - 100, 0);
+        
+        const res = await fetch(`https://api.spotify.com/v1/playlists/${id}/tracks?offset=${offset}&limit=100`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`
@@ -20,23 +33,34 @@ export const useFetchPlaylistData = (id) => {
         });
 
         const data = await res.json();
-        setPlaylistData(() => data.items.map((item, index) => {
+        const tracks = data.items.map((item, index) => {
           let songName = item.track.name;
           let songId = item.track.id;
           let songImage = item.track.album.images[0].url;
           if (songName.toLowerCase().includes('(feat')) {
             let featIndex = songName.toLowerCase().indexOf('(feat');
-            songName = songName.substring(0, featIndex-1);
+            songName = songName.substring(0, featIndex - 1);
           }
           return { id: index + 1, song: songName, artist: item.track.artists.map((artist) => artist.name), trackId: songId, image: songImage }
-        }));
+        });
+
+        // Reverse the order of tracks
+        if (totalTracks > 100) {
+          setPlaylistData(tracks.reverse());
+          setPlaylistData(tracks.map(track => (
+            {
+              ...track,
+              id: 101 - track.id
+            }
+          )));
+        }
 
       } catch (error) {
-        console.error(`catch clause error in fetchUserData: ${error}`);
+        console.error(`catch clause error in fetchPlaylistData: ${error}`);
       }
     }
     fetchPlaylistData();
-  },[token]);
+  }, [token, id]);
 
   return playlistData;
 }
