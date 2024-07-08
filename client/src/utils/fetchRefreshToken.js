@@ -8,6 +8,9 @@ export const useFetchRefreshToken = (code, state) => {
   const [accessToken, setAccessToken] = useState("");
   const [refreshToken, setRefreshToken] = useState("");
   const [expiresIn, setExpiresIn] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null); // Add error state
+  const [fetching, setFetching] = useState(false); // Add fetching state
 
   const authParams = {
     method: "POST",
@@ -24,23 +27,32 @@ export const useFetchRefreshToken = (code, state) => {
 
   const fetchToken = async () => {
     try {
+      setFetching(true);
       const res = await fetch(tokenUrl, authParams);
       const data = await res.json();
-      console.log("data: \n");
-      console.log(data);
+      console.log("data: \n", data);
+
+      if (data.error) {
+        throw new Error(data.error_description);
+      }
+
       setAccessToken(data.access_token);
       setRefreshToken(data.refresh_token);
       setExpiresIn(data.expires_in);
     } catch (error) {
       console.error(`Error in fetchToken: ${error}`);
+      setError(error.message); // Set error message
+    } finally {
+      setLoading(false);
+      setFetching(false);
     }
   };
 
   useEffect(() => {
-    if (code && state) {
+    if (code && state && !fetching) {
       fetchToken();
     }
   }, [code, state]);
 
-  return { accessToken, refreshToken, expiresIn };
+  return { accessToken, refreshToken, expiresIn, loading, error }; // Return error state
 };
