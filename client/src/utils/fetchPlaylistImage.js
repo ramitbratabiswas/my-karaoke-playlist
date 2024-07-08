@@ -4,7 +4,7 @@ import { useFetchSpotifyToken } from "./fetchAccessToken.js";
 export const useFetchPlaylistImage = (playlistId) => {
 
   const [playlistImage, setPlaylistImage] = useState([]);
-  const token = useFetchSpotifyToken();
+  const token = localStorage.getItem("access_token");
 
   useEffect(() => {
     const fetchPlaylistImage = async () => {

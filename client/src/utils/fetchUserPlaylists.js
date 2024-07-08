@@ -4,19 +4,18 @@ import { useFetchSpotifyToken } from "./fetchAccessToken.js";
 export const useFetchUserPlaylists = () => {
 
   const [userPlaylists, setUserPlaylists] = useState([]);
-  const token = useFetchSpotifyToken();
+  const accessToken = localStorage.getItem("access_token");
 
   useEffect(() => {
     const fetchUserPlaylists = async () => {
-      console.log("in fetchUserPlaylists");
       
-      if (!token) return null;
+      if (!accessToken) return null;
 
       try {
         const res = await fetch(`https://api.spotify.com/v1/me/playlists`, {
-          method: "GET",
+          method: "POST",
           headers: {
-            "Authorization": `Bearer ${token}`
+            "Authorization": `Bearer ${accessToken}`
           }
         });
 
@@ -36,7 +35,7 @@ export const useFetchUserPlaylists = () => {
       }
     }
     fetchUserPlaylists();
-  },[token]);
+  },[accessToken]);
 
   return userPlaylists;
 }

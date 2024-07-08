@@ -6,7 +6,8 @@ export const useFetchPlaylistData = (id) => {
     name: '',
     tracks: []
   });
-  const token = useFetchSpotifyToken();
+  
+  const token = localStorage.getItem("access_token");
 
   useEffect(() => {
     const fetchPlaylistData = async () => {

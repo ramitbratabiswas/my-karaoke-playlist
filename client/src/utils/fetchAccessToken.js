@@ -31,5 +31,5 @@ export const useFetchSpotifyToken = () => {
 
   }, []);
 
-  return token;
+  localStorage.setItem("access_token", token);
 }

@@ -81,13 +81,13 @@ app.get('/callback', (req, res) => {
           refresh_token = body.refresh_token;
 
         const options = {
-          url: 'https://api.spotify.com/v1/me/player/queue',
+          url: 'https://api.spotify.com/v1/me/playlists',
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
 
         request.get(options, (error, response, body) => {
-          // console.log(body);
+          console.log(body);
         });
 
         res.redirect('/#' +
