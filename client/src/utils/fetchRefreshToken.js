@@ -5,31 +5,42 @@ const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 const tokenUrl = "https://accounts.spotify.com/api/token";
 
 export const useFetchRefreshToken = (code, state) => {
+  const [accessToken, setAccessToken] = useState("");
+  const [refreshToken, setRefreshToken] = useState("");
+  const [expiresIn, setExpiresIn] = useState(0);
 
-  const [token, setToken] = useState("");
+  const authParams = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: "Basic " + Buffer.from(`${clientId}:${clientSecret}`).toString("base64"),
+    },
+    body: new URLSearchParams({
+      grant_type: "authorization_code",
+      code: code,
+      redirect_uri: "http://localhost:5173/callback",
+    }),
+  };
 
   const fetchToken = async () => {
     try {
-      const res = await fetch(tokenUrl, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded"
-        },
-        body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`
-      });
-
+      const res = await fetch(tokenUrl, authParams);
       const data = await res.json();
-      setToken(() => data.access_token);
+      console.log("data: \n");
+      console.log(data);
+      setAccessToken(data.access_token);
+      setRefreshToken(data.refresh_token);
+      setExpiresIn(data.expires_in);
     } catch (error) {
-      console.error(`catch clause error in fetchToken: ${error}`);
+      console.error(`Error in fetchToken: ${error}`);
     }
-  }
+  };
 
   useEffect(() => {
+    if (code && state) {
+      fetchToken();
+    }
+  }, [code, state]);
 
-    fetchToken();
-
-  }, []);
-
-  return token;
-}
+  return { accessToken, refreshToken, expiresIn };
+};

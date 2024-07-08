@@ -1,4 +1,4 @@
-import { redirect, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useFetchRefreshToken } from "../utils/fetchRefreshToken";
 
 export default function SpotifyCallback() {
