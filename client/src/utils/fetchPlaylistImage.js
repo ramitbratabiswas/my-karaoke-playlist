@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useFetchSpotifyToken } from "./fetchAccessToken.js";
 
 export const useFetchPlaylistImage = (playlistId) => {
 

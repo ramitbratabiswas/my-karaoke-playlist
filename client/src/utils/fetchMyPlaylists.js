@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import { useFetchSpotifyToken } from "./fetchAccessToken.js";
 
-export const useFetchUserPlaylists = () => {
+export const useFetchMyPlaylists = () => {
 
   const [userPlaylists, setUserPlaylists] = useState([]);
   const accessToken = localStorage.getItem("access_token");
 
   useEffect(() => {
-    const fetchUserPlaylists = async () => {
+    const fetchMyPlaylists = async () => {
       
       if (!accessToken) return null;
 
@@ -31,10 +30,10 @@ export const useFetchUserPlaylists = () => {
         setUserPlaylists(() => playlists);
 
       } catch (error) {
-        console.error(`catch clause error in fetchUserPlaylists: ${error}`);
+        console.error(`catch clause error in fetchMyPlaylists: ${error}`);
       }
     }
-    fetchUserPlaylists();
+    fetchMyPlaylists();
   },[accessToken]);
 
   return userPlaylists;

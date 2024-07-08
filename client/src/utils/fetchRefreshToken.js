@@ -46,5 +46,5 @@ export const useFetchRefreshToken = (code, state) => {
     }
   }, [code, state]);
 
-  return { accessToken, refreshToken, expiresIn};
+  return { accessToken, refreshToken };
 };

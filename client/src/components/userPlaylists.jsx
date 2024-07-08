@@ -1,9 +1,9 @@
-import { useFetchUserPlaylists } from "../utils/fetchUserPlaylists.js";
+import { useFetchMyPlaylists } from "../utils/fetchMyPlaylists.js";
 import { Link } from "react-router-dom";
 
 export default function UserPlaylists() {
 
-  const userPlaylists = useFetchUserPlaylists();
+  const userPlaylists = useFetchMyPlaylists();
 
   return (
     <div>

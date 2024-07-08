@@ -8,9 +8,8 @@ export default function SpotifyCallback() {
   const code = queryParams.get('code');
   const state = queryParams.get('state');
 
-  const { accessToken, refreshToken, expiresIn} = useFetchRefreshToken(code, state);
+  const { accessToken, refreshToken } = useFetchRefreshToken(code, state);
 
   localStorage.setItem("access_token", accessToken);
   localStorage.setItem("refresh_token", refreshToken);
-  localStorage.setItem("expires_in", expiresIn);
 }

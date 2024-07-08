@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useFetchSpotifyToken } from "./fetchAccessToken.js";
 
 export const useFetchPlaylistData = (id) => {
   const [playlistData, setPlaylistData] = useState({
