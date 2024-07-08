@@ -246,7 +246,15 @@ div.test {
   font-size: clamp(14px, 1.4vw, 21px);
   padding: 5px;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  line-height: 1.4em; /* adjust based on your line height */
+  max-height: 4.2em; /* should be line-height * number of lines */
 }
+
 
 .frontpage-container {
   display: flex;

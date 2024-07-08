@@ -18,6 +18,9 @@ export const App = () => {
   if (location.pathname.startsWith('/lyrics')) {
     primaryColorClass = 'primary-pink';
     secondaryColorClass = 'secondary-pink';
+  } else if (location.pathname.startsWith('/callback')) {
+    primaryColorClass = 'primary-blue';
+    secondaryColorClass = 'secondary-blue';
   } else {
     switch (location.pathname) {
       case '/spotifyplaylists':

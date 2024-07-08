@@ -12,7 +12,7 @@ export const useFetchMyPlaylists = () => {
 
       try {
         const res = await fetch(`https://api.spotify.com/v1/me/playlists`, {
-          method: "POST",
+          method: "GET",
           headers: {
             "Authorization": `Bearer ${accessToken}`
           }
@@ -23,7 +23,7 @@ export const useFetchMyPlaylists = () => {
           return {
             name: item.name,
             id: item.id,
-            imgUrl: item.images[0].url,
+            imgUrl: item.images[0].url, 
             description: item.description
           }
         });
