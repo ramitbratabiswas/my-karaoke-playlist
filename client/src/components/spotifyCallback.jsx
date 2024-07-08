@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useFetchRefreshToken } from "../utils/fetchRefreshToken";
+import MyPlaylists from "./myPlaylists";
 
 export default function SpotifyCallback() {
   const location = useLocation();
@@ -12,4 +13,6 @@ export default function SpotifyCallback() {
 
   localStorage.setItem("access_token", accessToken);
   localStorage.setItem("refresh_token", refreshToken);
+
+  return <MyPlaylists />;
 }
