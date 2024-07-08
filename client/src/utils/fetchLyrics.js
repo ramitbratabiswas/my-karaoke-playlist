@@ -8,7 +8,7 @@ export const useFetchLyrics = (song, artist) => {
   const corsProxy = 'https://cors-anywhere.herokuapp.com/';
   let songArtist = artist.join('_').split(" ").join("_");
   let songName = song;
-  const apiKey = "c0f3ccbe5f459a1591ccb611de159680";
+  const apiKey = import.meta.env.VITE_MUSIXMATCH_KEY;
   const apiUrl = `${corsProxy}https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=${songName}&q_artist=${songArtist}&apikey=${apiKey}`;
 
   useEffect(() => {

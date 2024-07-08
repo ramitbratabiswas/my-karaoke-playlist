@@ -24,6 +24,7 @@ a {
 
 h1 {
   font-size: clamp(20px, 2vw, 28px);
+  color: white;
 }
 
 .header {
@@ -245,4 +246,49 @@ div.test {
   font-size: clamp(14px, 1.4vw, 21px);
   padding: 5px;
   margin: 0;
+}
+
+.frontpage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.tagline {
+  margin-bottom: 10px;
+  width: 60%; 
+}
+
+.tagline-text {
+  font-size: clamp(60px, 6vw, 120px);
+  font-weight: bold;
+}
+
+.subtagline {
+  margin-bottom: 20px;
+  width: 35%;
+}
+
+.subtagline-text {
+  font-size: clamp(20px, 2.4vw, 40px);
+  font-weight: 500;
+}
+
+.home-link:hover {
+  transform: scale(1.02);
+}
+
+.link-1:hover {
+  color:rgb(166, 185, 243);
+}
+
+.link-2:hover {
+  color:rgb(106, 238, 187);
+}
+
+.nav {
+  padding-bottom: 20px;
 }
