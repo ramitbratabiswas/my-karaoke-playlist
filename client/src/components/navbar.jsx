@@ -17,8 +17,8 @@ export default function Navbar({ primaryColorClass, secondaryColorClass }) {
           id='karaoke'>karaoke</span> playlist!</h1>
       </Link>
     </div>
-    <div className="profile" onClick={handleProfileClick}>
-      <Profile/>
+    <div className="profile">
+      <Profile onClick={handleProfileClick}/>
     </div>
   </div>);
 }

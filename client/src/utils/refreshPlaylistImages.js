@@ -1,7 +1,11 @@
 import { playlists } from "../data/playlists"
 import { useFetchPlaylistImage } from "./fetchPlaylistImage"
+import { useFetchSpotifyToken } from "./fetchAccessToken";
 
 export const useRefreshImages = () => {
+
+  useFetchSpotifyToken();
+
   playlists[0].image = useFetchPlaylistImage(playlists[0].id);
   playlists[1].image = useFetchPlaylistImage(playlists[1].id);
   playlists[2].image = useFetchPlaylistImage(playlists[2].id);
