@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useFetchPlaylistData } from "../utils/fetchPlaylistData.js";
-import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
 import { useFetchLyrics } from "../utils/fetchLyrics.js"
 import { useParams } from "react-router-dom";
 

@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 
 export const useFetchMyQueue = () => {
 
-  const [queue, setQueue] = useState({});
+  const [queueData, setQueueData] = useState({
+    name: '',
+    tracks: []
+  });
   const accessToken = localStorage.getItem("access_token");
 
   useEffect(() => {
     const fetchMyQueue = async () => {
-      
       if (!accessToken) return null;
 
       try {
@@ -18,17 +20,23 @@ export const useFetchMyQueue = () => {
           }
         });
 
-        const jsonified = await res.json();
-        console.log(jsonified.queue);
-        // const playlists = jsonified.items.map((item) => {
-        //   return {
-        //     name: item.name,
-        //     id: item.id,
-        //     imgUrl: item.images[0].url, 
-        //     description: item.description
-        //   }
-        // });
-        // setUserPlaylists(() => playlists);
+        const data = await res.json();
+        console.log(data.queue);
+        const tracks = data.queue.map((item, index) => {
+          let songName = item.name;
+          let songId = item.id;
+          let songImage = item.album.images[0].url;
+          if (songName.toLowerCase().includes('(feat')) {
+            let featIndex = songName.toLowerCase().indexOf('(feat');
+            songName = songName.substring(0, featIndex - 1);
+          }
+          return { id: index + 1, song: songName, artist: item.artists.map((artist) => artist.name), trackId: songId, image: songImage }
+        })
+        
+        setQueueData({
+          name: "Queue",
+          tracks: tracks
+        });
 
       } catch (error) {
         console.error(`catch clause error in fetchMyPlaylists: ${error}`);
@@ -37,5 +45,5 @@ export const useFetchMyQueue = () => {
     fetchMyQueue();
   },[accessToken]);
 
-  // return userPlaylists;
+  return queueData;
 }

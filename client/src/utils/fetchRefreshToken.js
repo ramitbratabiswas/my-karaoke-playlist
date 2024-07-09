@@ -7,7 +7,6 @@ const tokenUrl = "https://accounts.spotify.com/api/token";
 export const useFetchRefreshToken = (code, state) => {
   const [accessToken, setAccessToken] = useState("");
   const [refreshToken, setRefreshToken] = useState("");
-  const [expiresIn, setExpiresIn] = useState(0);
 
   const authParams = {
     method: "POST",
@@ -26,25 +25,23 @@ export const useFetchRefreshToken = (code, state) => {
     try {
       const res = await fetch(tokenUrl, authParams);
       const data = await res.json();
-      console.log("data: \n", data);
 
       if (data.error) {
         throw new Error(data.error_description);
       }
 
-      setAccessToken(data.access_token);
-      setRefreshToken(data.refresh_token);
-      setExpiresIn(data.expires_in);
+      setAccessToken(() => data.access_token);
+      setRefreshToken(() => data.refresh_token);
     } catch (error) {
       console.error(`Error in fetchToken: ${error}`);
     }
   };
 
-  useEffect(() => {
+  //useEffect(() => {
     if (code && state) {
       fetchToken();
     }
-  }, [code, state]);
+  //}, [code, state]);
 
   return { accessToken, refreshToken };
 };
