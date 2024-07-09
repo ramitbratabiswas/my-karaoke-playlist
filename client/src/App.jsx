@@ -4,10 +4,10 @@ import Accordion from './components/accordion.jsx'
 import Navbar from './components/navbar.jsx'
 import SpotifyPlaylists from './components/spotifyPlaylists.jsx';
 import SpotifyCallback from './components/spotifyCallback.jsx';
-import MyPlaylists from './components/myPlaylists.jsx';
 
 import './assets/styles/main.css'
 import Frontpage from './pages/frontpage.jsx';
+import MyMusic from './pages/myMusic.jsx';
 
 export const App = () => {
 
@@ -27,7 +27,7 @@ export const App = () => {
         primaryColorClass = 'primary-green';
         secondaryColorClass = 'secondary-green';
         break;
-      case '/myplaylists':
+      case '/mymusic':
         primaryColorClass = 'primary-blue';
         secondaryColorClass = 'secondary-blue';
         break;
@@ -43,7 +43,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Frontpage />} />
         <Route path="/spotifyplaylists" element={<SpotifyPlaylists />} />
-        <Route path="/myplaylists" element={<MyPlaylists />} />
+        <Route path="/mymusic" element={<MyMusic />} />
         <Route path="/lyrics/:id" element={<Accordion />} />
         <Route path="/callback" element={<SpotifyCallback />}/>
       </Routes>
