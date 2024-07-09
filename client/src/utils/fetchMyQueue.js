@@ -34,7 +34,7 @@ export const useFetchMyQueue = () => {
         })
         
         setQueueData({
-          name: "Queue",
+          name: "queue",
           tracks: tracks
         });
 

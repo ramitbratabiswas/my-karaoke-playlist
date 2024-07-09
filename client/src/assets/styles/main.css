@@ -123,6 +123,36 @@ h1 {
   color:rgb(219, 255, 241);
 }
 
+.user-music-bar {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  margin-left: 20px;
+  display: flex; /* Align list items in a row */
+  gap: 10px; /* Space between buttons */
+  flex-wrap: wrap;
+}
+
+.user-music-redirector {
+  background-color: rgb(74, 110, 231); /* Background color of the buttons */
+  color: #fff; /* Text color */
+  padding: 14px 22px; /* Padding inside the buttons */
+  border-radius: 50px; /* Completely rounded sides */
+  text-align: center; /* Center text inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: clamp(14px, 1.6vw, 20px); /* Font size for the text */
+  font-weight: 500; /* Font weight for the text */
+}
+
+.user-music-redirector a {
+  color: #fff; /* Text color inside the button */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.user-music-redirector:hover {
+  background-color: rgb(29, 78, 240); /* Darker background on hover */
+}
+
 .primary-pink {
   color:hotpink;
 }

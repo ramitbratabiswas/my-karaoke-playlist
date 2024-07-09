@@ -34,7 +34,7 @@ export const useFetchMyTopShort = () => {
         })
         
         setMyTopShortData({
-          name: "Top 50 Songs - Last 6 Months",
+          name: "top songs - last month",
           tracks: tracks
         });
 

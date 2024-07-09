@@ -33,7 +33,7 @@ export const useFetchMyRecents = () => {
         })
         
         setRecentsData({
-          name: "Recently Played",
+          name: "recents",
           tracks: tracks
         });
 

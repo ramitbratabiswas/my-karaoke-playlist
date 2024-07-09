@@ -34,7 +34,7 @@ export const useFetchMyTopLong = () => {
         })
         
         setMyTopLongData({
-          name: "Top 50 Songs - Last 1 Year",
+          name: "top songs - last year",
           tracks: tracks
         });
 

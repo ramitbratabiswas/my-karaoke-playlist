@@ -34,7 +34,7 @@ export const useFetchMyTopMedium = () => {
         })
         
         setMyTopMediumData({
-          name: "Top 50 Songs - Last 6 Months",
+          name: "top songs - last 6 months",
           tracks: tracks
         });
 
