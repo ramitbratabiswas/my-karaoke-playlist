@@ -20,18 +20,23 @@ export const App = () => {
   let primaryColorClass;
   let secondaryColorClass;
 
-  switch (location.pathname) {
-    case '/spotifyplaylists':
-      primaryColorClass = 'primary-green';
-      secondaryColorClass = 'secondary-green';
-      break;
-    case '/mymusic':
-      primaryColorClass = 'primary-blue';
-      secondaryColorClass = 'secondary-blue';
-      break;
-    default:
-      primaryColorClass = 'primary-pink';
-      secondaryColorClass = 'secondary-pink';
+  if (location.pathname !== "/") {
+
+    switch (location.pathname) {
+      case '/spotifyplaylists':
+        primaryColorClass = 'primary-green';
+        secondaryColorClass = 'secondary-green';
+        break;
+      case '/mymusic':
+      case '/callback':
+        primaryColorClass = 'primary-blue';
+        secondaryColorClass = 'secondary-blue';
+        break;
+      default:
+        primaryColorClass = 'primary-pink';
+        secondaryColorClass = 'secondary-pink';
+    }
+
   }
 
   return (
