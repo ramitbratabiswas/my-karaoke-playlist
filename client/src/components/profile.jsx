@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useFetchUserProfile } from "../utils/fetchUserProfile";
 
 export default function Profile({ onClick }) {

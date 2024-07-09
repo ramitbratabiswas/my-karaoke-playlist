@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { useFetchPlaylistData } from "../utils/fetchPlaylistData.js";
 import { useFetchLyrics } from "../utils/fetchLyrics.js"
-import { useParams } from "react-router-dom";
 
-export default function Accordion() {
+export default function Accordion({ data }) {
 
-  const { id } = useParams();
-  const { name, tracks } = useFetchPlaylistData(id);
+  const { name, tracks } = data;
 
   const [selected, setSelected] = useState(-1);
 

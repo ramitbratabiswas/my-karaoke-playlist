@@ -1,6 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-import Accordion from './components/accordion.jsx'
 import Navbar from './components/navbar.jsx'
 import SpotifyPlaylists from './components/spotifyPlaylists.jsx';
 import SpotifyCallback from './components/spotifyCallback.jsx';
@@ -8,6 +7,7 @@ import SpotifyCallback from './components/spotifyCallback.jsx';
 import './assets/styles/main.css'
 import Frontpage from './pages/frontpage.jsx';
 import MyMusic from './pages/myMusic.jsx';
+import PlaylistLyrics from './pages/playlistLyrics.jsx';
 
 export const App = () => {
 
@@ -44,7 +44,7 @@ export const App = () => {
         <Route path="/" element={<Frontpage />} />
         <Route path="/spotifyplaylists" element={<SpotifyPlaylists />} />
         <Route path="/mymusic" element={<MyMusic />} />
-        <Route path="/lyrics/:id" element={<Accordion />} />
+        <Route path="/lyrics/:id" element={<PlaylistLyrics />} />
         <Route path="/callback" element={<SpotifyCallback />}/>
       </Routes>
     </div>
