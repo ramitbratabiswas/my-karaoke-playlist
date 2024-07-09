@@ -37,11 +37,11 @@ export const useFetchRefreshToken = (code, state) => {
     }
   };
 
-  //useEffect(() => {
+  useEffect(() => {
     if (code && state) {
       fetchToken();
     }
-  //}, [code, state]);
+  }, [code, state]);
 
   return { accessToken, refreshToken };
 };
