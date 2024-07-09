@@ -27,9 +27,43 @@ h1 {
   color: white;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  margin-left: auto;
+}
+
+.profile-wrapper {
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 500;
+  margin: 10px;
+}
+
+.profile-name {
+  margin-right: 15px;
+}
+
+.profile-icon {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.header:hover {
+  background-color: rgb(47, 66, 79);
+}
+
+.profile-icon:hover {
+  background-color: rgb(47, 66, 79);
+}
+
 .header {
   margin: 0px 20px;
-  padding-top: 10px;
+  padding: 10px;
 }
 
 .list-heading {
@@ -261,7 +295,7 @@ div.test {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
   text-align: center;
 }
 
@@ -295,8 +329,4 @@ div.test {
 
 .link-2:hover {
   color:rgb(106, 238, 187);
-}
-
-.nav {
-  padding-bottom: 20px;
 }

@@ -27,7 +27,7 @@ export const App = () => {
         primaryColorClass = 'primary-green';
         secondaryColorClass = 'secondary-green';
         break;
-      case '/userplaylists':
+      case '/myplaylists':
         primaryColorClass = 'primary-blue';
         secondaryColorClass = 'secondary-blue';
         break;

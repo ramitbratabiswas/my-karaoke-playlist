@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Profile from "./profile";
 
 export default function Navbar({ primaryColorClass, secondaryColorClass }) {
+
+  const navigate = useNavigate();
+
+  const handleProfileClick = () => {
+    localStorage.clear();
+    navigate("/");
+  }
+
   return (<div className="nav">
     <div>
       <Link to="/">
@@ -8,7 +17,8 @@ export default function Navbar({ primaryColorClass, secondaryColorClass }) {
           id='karaoke'>karaoke</span> playlist!</h1>
       </Link>
     </div>
-    <div className='profile icon'>
+    <div className="profile" onClick={handleProfileClick}>
+      <Profile/>
     </div>
   </div>);
 }
