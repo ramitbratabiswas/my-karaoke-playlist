@@ -9,7 +9,7 @@ export default function MyMusic() {
         <li className="user-music-redirector"><Link to="/queue">queue</Link></li>
         <li className="user-music-redirector"><Link to="/recents">recents</Link></li>
         <li className="user-music-redirector"><Link to="/topshort">top songs - last month</Link></li>
-        <li className="user-music-redirector"><Link to="/topmed">top songs - last 6 months</Link></li>
+        <li className="user-music-redirector"><Link to="/topmedium">top songs - last 6 months</Link></li>
         <li className="user-music-redirector"><Link to="/toplong">top songs - last year</Link></li>
       </ul>
       <MyPlaylists />
