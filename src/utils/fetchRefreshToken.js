@@ -30,6 +30,9 @@ export const useFetchRefreshToken = (code, state) => {
         throw new Error(data.error_description);
       }
 
+      localStorage.setItem("access_token",data.access_token);
+      localStorage.setItem("refresh_token",data.refresh_token);
+
       setAccessToken(() => data.access_token);
       setRefreshToken(() => data.refresh_token);
     } catch (error) {
