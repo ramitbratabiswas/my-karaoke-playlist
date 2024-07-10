@@ -4,16 +4,12 @@ import { useFetchRefreshToken } from "../utils/fetchRefreshToken";
 
 export default function SpotifyCallback() {
 
-  console.log("in SpotifyCallback");
-
   const location = useLocation();
   const navigate = useNavigate();
 
   const queryParams = new URLSearchParams(location.search);
   const code = queryParams.get('code');
   const state = queryParams.get('state');
-
-  console.log("code: " + code + ", state: " + state);
 
   const { accessToken, refreshToken } = useFetchRefreshToken(code, state);
 
