@@ -24,7 +24,7 @@ export default function SpotifyCallback() {
       
       navigate("/mymusic");
     }
-  }, [accessToken, refreshToken, navigate]);
+  }, [accessToken, refreshToken]);
 
   return null;
 }

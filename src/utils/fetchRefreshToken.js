@@ -17,7 +17,7 @@ export const useFetchRefreshToken = (code, state) => {
     body: new URLSearchParams({
       grant_type: "authorization_code",
       code: code,
-      redirect_uri: "https://my-karaoke-playlist.vercel.app/callback",
+      redirect_uri: "https://mykaraokeplaylist.netlify.app/callback",
     }),
   };
 
@@ -29,9 +29,6 @@ export const useFetchRefreshToken = (code, state) => {
       if (data.error) {
         throw new Error(data.error_description);
       }
-
-      localStorage.setItem("access_token",data.access_token);
-      localStorage.setItem("refresh_token",data.refresh_token);
 
       setAccessToken(() => data.access_token);
       setRefreshToken(() => data.refresh_token);
