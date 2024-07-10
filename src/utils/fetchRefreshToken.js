@@ -12,7 +12,7 @@ export const useFetchRefreshToken = (code, state) => {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
-      Authorization: "Basic " + btoa(`${clientId}:${clientSecret}`),
+      Authorization: "Basic " + Buffer.from(`${clientId}:${clientSecret}`).toString("base64"),
     },
     body: new URLSearchParams({
       grant_type: "authorization_code",
