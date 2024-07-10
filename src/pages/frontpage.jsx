@@ -4,7 +4,7 @@ import { createAuthLink } from "../utils/createAuthLink";
 export default function Frontpage() {
 
   const authLink = createAuthLink();
-  console.log(authLink)
+  console.log(authLink);
 
   return (
     <div className="frontpage-container">

@@ -20,11 +20,5 @@ export default defineConfig({
       crypto: 'crypto-browserify',
     },
   },
-  root: '.',
-  publicDir: 'public',
-  server: {
-    proxy: {
-      '/auth': 'http://localhost:3000',
-    },
-  },
+  root: '.'
 });

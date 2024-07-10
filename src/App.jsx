@@ -47,7 +47,7 @@ export const App = () => {
         <Route path="/spotifyplaylists" element={<SpotifyPlaylists />} />
         <Route path="/mymusic" element={<MyMusic />} />
         <Route path="/lyrics/:id" element={<PlaylistLyrics />} />
-        <Route path="/callback" element={<SpotifyCallback />} />
+        <Route path="/callback/*" element={<SpotifyCallback />} />
         <Route path="/queue" element={<Queue />} />
         <Route path="/recents" element={<Recents />} />
         <Route path="/topshort" element={<TopShort />} />
