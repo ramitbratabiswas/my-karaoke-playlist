@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { useState, useEffect } from "react";
 
-const corsProxy = '';
+const corsProxy = 'https://cors-anywhere.herokuapp.com/';
 const placeHolder = 'https://www.musixmatch.com/lyrics/';
 
 export const useScrapeLyrics = (song, artist) => {

@@ -5,7 +5,7 @@ export const useFetchLyrics = (song, artist) => {
   const [lyrics, setLyrics] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const corsProxy = '';
+  const corsProxy = 'https://cors-anywhere.herokuapp.com/';
   let songArtist = artist.join('_').split(" ").join("_");
   let songName = song;
   const apiKey = import.meta.env.VITE_MUSIXMATCH_KEY;
