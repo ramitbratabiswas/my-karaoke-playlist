@@ -1,18 +1,15 @@
 import * as cheerio from "cheerio";
 import { useState, useEffect } from "react";
 
-const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-const placeHolder = 'https://www.musixmatch.com/lyrics/';
-
 export const useScrapeLyrics = (song, artist) => {
 
   const artistString = artist.join('-').replaceAll('.','').toLowerCase().split(" ").join("-");
   const songString = song.toLowerCase().replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll('.','').replaceAll(' ', '-');
 
-  const url = `${corsProxy}${placeHolder}${artistString}/${songString}`;
-
   const [scrapedLyrics, setScrapedLyrics] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+
+  const apiUrl = `http://localhost:8080/api/scrape?artist=${artistString}&song=${songString}`
 
   useEffect(() => {
 
@@ -21,9 +18,9 @@ export const useScrapeLyrics = (song, artist) => {
 
     const fetchScrapedLyrics = async () => {
       try {
-        const page = await fetch(url, {
-          method: "GET",
-        });
+        const page = await fetch(apiUrl);
+
+        console.log(page);
 
         if (!page.ok) {
           setScrapedLyrics(() => "sorry, we couldn't find the lyrics for this one :(");
@@ -47,7 +44,7 @@ export const useScrapeLyrics = (song, artist) => {
       }
     }
     fetchScrapedLyrics();
-  }, [url]);
+  }, [apiUrl]);
 
   return [scrapedLyrics, isLoading];
 }

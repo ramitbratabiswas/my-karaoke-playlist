@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useFetchLyrics } from "../utils/fetchLyrics.js"
+import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
 
 export default function Accordion({ data }) {
 
@@ -7,8 +8,8 @@ export default function Accordion({ data }) {
 
   const [selected, setSelected] = useState(-1);
 
-  // let [lyrics, loading] = useScrapeLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
-  let [lyrics, loading] = useFetchLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
+  let [lyrics, loading] = useScrapeLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
+  // let [lyrics, loading] = useFetchLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
 
   function handleSingleSelection(currentId) {
     if (selected !== currentId) {

@@ -5,11 +5,9 @@ export const useFetchLyrics = (song, artist) => {
   const [lyrics, setLyrics] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const corsProxy = 'https://cors-anywhere.herokuapp.com/';
   let songArtist = artist.join('_').split(" ").join("_");
   let songName = song;
-  const apiKey = import.meta.env.VITE_MUSIXMATCH_KEY;
-  const apiUrl = `${corsProxy}https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=${songName}&q_artist=${songArtist}&apikey=${apiKey}`;
+  let apiUrl = `https://cors-proxy-production-726b.up.railway.app/api/lyrics?song=${songName}&artist=${songArtist}`;
 
   useEffect(() => {
 
@@ -17,10 +15,10 @@ export const useFetchLyrics = (song, artist) => {
     setIsLoading(() => true);
 
     fetch(apiUrl).then(res => {
-      return res.json()
+      return res.json();
     }).then(data => {
-      if (data.message.body.lyrics) {
-        let returned = data.message.body.lyrics.lyrics_body.split("***")[0];
+      if (data.lyrics) {
+        let returned = data.lyrics;
         setLyrics(() => returned);
         setIsLoading(() => false);
       }
