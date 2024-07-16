@@ -32,6 +32,10 @@ export const App = () => {
         primaryColorClass = 'primary-blue';
         secondaryColorClass = 'secondary-blue';
         break;
+      case '/frontpage':
+        primaryColorClass = 'white';
+        secondaryColorClass = 'white';
+        break;
       default:
         primaryColorClass = 'primary-pink';
         secondaryColorClass = 'secondary-pink';
