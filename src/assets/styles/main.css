@@ -87,10 +87,7 @@ h1 {
   margin: 0px 20px;
   padding: 10px;
   z-index: 1;
-}
-
-.header:hover {
-  text-decoration: underline;
+  transition: text-shadow 0.3s ease;
 }
 
 .list-heading {
@@ -103,12 +100,37 @@ h1 {
   color: white;
 }
 
+.white:hover {
+  text-shadow: 0px 0px 12px white;
+}
+
 .primary-blue {
   color:rgb(74, 110, 231);
 }
 
 .primary-green {
   color:rgb(23, 181, 120);
+}
+
+.primary-green:hover {
+  text-shadow: 0px 0px 12px rgb(114, 228, 184);
+}
+.secondary-green:hover {
+  text-shadow: 0px 0px 12px rgb(114, 228, 184);
+}
+
+.primary-blue:hover {
+  text-shadow: 0px 0px 12px rgb(145, 161, 252);
+}
+.secondary-blue:hover {
+  text-shadow: 0px 0px 12px rgb(145, 161, 252);
+}
+
+.primary-pink:hover {
+  text-shadow: 0px 0px 12px rgb(255, 187, 230);
+}
+.secondary-pink:hover {
+  text-shadow: 0px 0px 12px rgb(255, 187, 230);
 }
 
 .secondary-pink {
