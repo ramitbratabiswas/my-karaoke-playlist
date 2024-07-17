@@ -20,3 +20,4 @@ The website is also fully responsive, so you get the same experience regardless 
 <img height="636" alt="Screenshot 2024-07-16 at 10 31 56 AM" src="https://github.com/user-attachments/assets/07889944-6af2-4168-a5a7-4a9b6ec462ae">
 </p>
 
+The site uses <b>HTML, CSS, JS, and React</b> for the user interface, <b>React Router V6</b> to implement client-side routing, <b>Spotify Web API</b> for authorization and music features, and <b>Cheerio</b> to scrape lyrics from Musixmatch.
