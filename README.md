@@ -20,4 +20,8 @@ The website is also fully responsive, so you get the same experience regardless 
 <img height="636" alt="Screenshot 2024-07-16 at 10 31 56 AM" src="https://github.com/user-attachments/assets/07889944-6af2-4168-a5a7-4a9b6ec462ae">
 </p>
 
-The site uses <b>HTML, CSS, JS, and React</b> for the user interface, <b>React Router V6</b> to implement client-side routing, <b>Spotify Web API</b> for authorization and music features, and <b>Cheerio</b> to scrape lyrics from Musixmatch.
+The site uses <b>HTML, CSS, JS, and React</b> for the user interface, <b>React Router V6</b> to implement client-side routing, <b>Spotify Web API</b> for authorization and music features, and <b>Cheerio</b> to scrape full lyrics from Musixmatch with an option to avoid web scraping by using the official Musixmatch lyrics API (although this only officially provides 30% of a song's lyrics).
+
+The site uses a CORS proxy server to allow secure API requests. The proxy server was implemented by me using <b>Express</b> and can be found here: https://github.com/ramitbratabiswas/cors-proxy.
+
+The album collage banner was generated using my own album collage maker: https://github.com/ramitbratabiswas/album-collage-maker
