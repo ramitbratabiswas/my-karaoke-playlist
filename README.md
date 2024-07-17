@@ -1,9 +1,11 @@
 # my karaoke playlist!
 
-<img width="1440" alt="Spotify sample playlists page" src="https://github.com/ramitbratabiswas/my-karaoke-playlist/assets/23477303/e4143f3a-d83b-4cab-b376-78947cf8ff46">
-
-
-<img width="1440" alt="User's own playlists page" src="https://github.com/ramitbratabiswas/my-karaoke-playlist/assets/23477303/56b411ca-1a48-458d-81c4-f663ab053702">
-
-
-<img width="1440" alt="Lyrics display page" src="https://github.com/ramitbratabiswas/my-karaoke-playlist/assets/23477303/fd5451b0-4fbe-4658-a26b-0b6247c00da4">
+<img width="1440" alt="Screenshot 2024-07-16 at 2 35 30 PM" src="https://github.com/user-attachments/assets/08396201-65be-47d9-afa1-dc446b9b5df8">
+<img width="1440" alt="Screenshot 2024-07-16 at 10 29 38 AM" src="https://github.com/user-attachments/assets/cc13e992-3676-4a2e-bac4-17715bda96a6">
+<img width="939" alt="Screenshot 2024-07-16 at 10 34 31 AM" src="https://github.com/user-attachments/assets/4d444215-13cb-47e8-9b4c-53e7ff013e7d">
+<img width="656" alt="Screenshot 2024-07-16 at 10 33 28 AM" src="https://github.com/user-attachments/assets/5ca53433-d111-44b8-98a0-827d22ec5878">
+<img width="657" alt="Screenshot 2024-07-16 at 10 33 02 AM" src="https://github.com/user-attachments/assets/f0eebc2c-9d8a-4188-957c-fe0d1e9448bb">
+<img width="484" alt="Screenshot 2024-07-16 at 10 31 56 AM" src="https://github.com/user-attachments/assets/07889944-6af2-4168-a5a7-4a9b6ec462ae">
+<img width="1440" alt="Screenshot 2024-07-16 at 10 28 12 AM" src="https://github.com/user-attachments/assets/a14d56e2-3be1-422c-915b-7da0dafd038f">
+<img width="1440" alt="Screenshot 2024-07-16 at 10 27 14 AM" src="https://github.com/user-attachments/assets/e3b873a4-7aa7-4f9e-b280-161be1c8c12b">
+<img width="1440" alt="Screenshot 2024-07-16 at 10 34 46 AM" src="https://github.com/user-attachments/assets/d790a181-017d-4f11-814f-61776e99ef9b">
