@@ -4,7 +4,6 @@
 <img width="1440" alt="Screenshot 2024-07-16 at 10 29 38 AM" src="https://github.com/user-attachments/assets/cc13e992-3676-4a2e-bac4-17715bda96a6">
 <img width="939" alt="Screenshot 2024-07-16 at 10 34 31 AM" src="https://github.com/user-attachments/assets/4d444215-13cb-47e8-9b4c-53e7ff013e7d">
 <img width="656" alt="Screenshot 2024-07-16 at 10 33 28 AM" src="https://github.com/user-attachments/assets/5ca53433-d111-44b8-98a0-827d22ec5878">
-<img width="657" alt="Screenshot 2024-07-16 at 10 33 02 AM" src="https://github.com/user-attachments/assets/f0eebc2c-9d8a-4188-957c-fe0d1e9448bb">
 <img width="484" alt="Screenshot 2024-07-16 at 10 31 56 AM" src="https://github.com/user-attachments/assets/07889944-6af2-4168-a5a7-4a9b6ec462ae">
 <img width="1440" alt="Screenshot 2024-07-16 at 10 28 12 AM" src="https://github.com/user-attachments/assets/a14d56e2-3be1-422c-915b-7da0dafd038f">
 <img width="1440" alt="Screenshot 2024-07-16 at 10 27 14 AM" src="https://github.com/user-attachments/assets/e3b873a4-7aa7-4f9e-b280-161be1c8c12b">
