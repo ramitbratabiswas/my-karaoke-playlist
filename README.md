@@ -11,6 +11,9 @@ You can log in to Spotify to view your own playlists, queue, recents, and top so
 Or, alternatively, you could just use at Spotify's most popular playlists without logging in :)
 
 <img width="1440" alt="Screenshot 2024-07-16 at 10 34 46 AM" src="https://github.com/user-attachments/assets/d790a181-017d-4f11-814f-61776e99ef9b">
+
+The website is fully responsive, so you get the same experience regardless of what device you use.
+
 <img width="1440" alt="Screenshot 2024-07-16 at 10 29 38 AM" src="https://github.com/user-attachments/assets/cc13e992-3676-4a2e-bac4-17715bda96a6">
 <img width="939" alt="Screenshot 2024-07-16 at 10 34 31 AM" src="https://github.com/user-attachments/assets/4d444215-13cb-47e8-9b4c-53e7ff013e7d">
 <img width="656" alt="Screenshot 2024-07-16 at 10 33 28 AM" src="https://github.com/user-attachments/assets/5ca53433-d111-44b8-98a0-827d22ec5878">
