@@ -1,7 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Navbar from './components/navbar.jsx'
-import SpotifyPlaylists from './components/spotifyPlaylists.jsx';
 import SpotifyCallback from './components/spotifyCallback.jsx';
 
 import './assets/styles/main.css'
@@ -23,10 +22,6 @@ export const App = () => {
   if (location.pathname !== "/") {
 
     switch (location.pathname) {
-      case '/spotifyplaylists':
-        primaryColorClass = 'primary-green';
-        secondaryColorClass = 'secondary-green';
-        break;
       case '/mymusic':
       case '/callback':
         primaryColorClass = 'primary-blue';
@@ -48,7 +43,6 @@ export const App = () => {
       <Navbar primaryColorClass={primaryColorClass} secondaryColorClass={secondaryColorClass} />
       <Routes>
         <Route path="/" element={<Frontpage />} />
-        <Route path="/spotifyplaylists" element={<SpotifyPlaylists />} />
         <Route path="/mymusic" element={<MyMusic />} />
         <Route path="/lyrics/:id" element={<PlaylistLyrics />} />
         <Route path="/callback/*" element={<SpotifyCallback />} />
