@@ -46,7 +46,7 @@ export const useFetchPlaylistData = (id) => {
         });
 
         let updatedTracks = totalTracks > 100
-          ? tracks.reverse().map((track, index) => ({
+          ? tracks.reverse().map((track) => ({
               ...track,
               id: 101 - track.id
             }))
