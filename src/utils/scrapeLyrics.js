@@ -5,6 +5,7 @@ export const useScrapeLyrics = (song, artist) => {
   const artistString = artist.join('-').replaceAll('.','').toLowerCase().split(" ").join("-");
   const songString = song.toLowerCase().replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll('.','').replaceAll(' ', '-');
   const apiUrl = `https://cors-proxy-production-726b.up.railway.app/api/scrape?artist=${encodeURIComponent(artistString)}&song=${encodeURIComponent(songString)}`;
+  // const apiUrl = `http://localhost:8080/api/scrape?artist=${encodeURIComponent(artistString)}&song=${encodeURIComponent(songString)}`;
 
   const [scrapedLyrics, setScrapedLyrics] = useState("");
   const [isLoading, setIsLoading] = useState(true);

@@ -18,6 +18,7 @@ export const useFetchRefreshToken = (code, state) => {
       grant_type: "authorization_code",
       code: code,
       redirect_uri: "https://mykaraokeplaylist.netlify.app/callback",
+      // redirect_uri: "http://localhost:5173/callback",
     }),
   };
 
