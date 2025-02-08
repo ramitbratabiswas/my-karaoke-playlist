@@ -9,7 +9,6 @@ export default function Accordion({ data }) {
   const [selected, setSelected] = useState(-1);
 
   let [lyrics, loading] = useScrapeLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
-  console.log("", lyrics);
   // let [lyrics, loading] = useFetchLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
 
   function handleSingleSelection(currentId) {

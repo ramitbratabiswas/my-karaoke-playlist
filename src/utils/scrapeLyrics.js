@@ -19,6 +19,7 @@ export const useScrapeLyrics = (song, artist) => {
       return res.json();
     }).then(data => {
       if (data.lyrics) {
+        if (data.lyrics[1] == "\n") data.lyrics = data.lyrics.substring(2);
         let returned = data.lyrics;
         setScrapedLyrics(() => returned);
         setIsLoading(() => false);
