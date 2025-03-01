@@ -7,7 +7,7 @@ export const useFetchLyrics = (song, artist) => {
 
   let songArtist = artist.join('_').split(" ").join("_");
   let songName = song;
-  let apiUrl = `https://cors-proxy-production-726b.up.railway.app/api/lyrics?song=${songName}&artist=${songArtist}`;
+  let apiUrl = `https://cors-proxy-sfh7.onrender.com/api/lyrics?song=${songName}&artist=${songArtist}`;
 
   useEffect(() => {
 
