@@ -36,7 +36,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 12vh;
   z-index: 1;
 }
 
@@ -53,7 +53,6 @@ h1 {
 .profile-icon {
   display: flex;
   align-items: center;
-  padding: 10px;
 }
 
 .profile-text {
@@ -92,6 +91,17 @@ h1 {
 
 .list-heading {
   margin: 40px 40px 20px 20px;
+  display: flex;
+  gap: 2vw;
+}
+
+#accordion-heading-back {
+  font-weight: 600;
+  font-size: clamp(36px, 4.8vw, 60px);
+  padding-top: 10px;
+}
+
+#accordion-heading-name {
   font-weight: 600;
   font-size: clamp(48px, 6vw, 72px);
 }

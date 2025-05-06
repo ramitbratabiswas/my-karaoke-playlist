@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useFetchLyrics } from "../utils/fetchLyrics.js"
 import { useScrapeLyrics } from "../utils/scrapeLyrics.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Accordion({ data }) {
 
@@ -22,7 +24,10 @@ export default function Accordion({ data }) {
 
   return (
     <div>
-      <h1 className="list-heading" id="playlist-name-heading">{name}</h1>
+      <div className="list-heading">
+        <h1 id="accordion-heading-back"><FontAwesomeIcon icon={faArrowLeft}/></h1>
+        <h1 id="accordion-heading-name">{name}</h1>
+      </div>
       <div className="wrapper accordion">
         {
           tracks && tracks.length > 0 ?
