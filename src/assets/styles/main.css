@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-@media only screen and (max-width: 600px) {
-  #songName { 
-    font-size: 3vw; 
-  }
-}
-
 * {
   font-family: 'DM Sans', 'Helvetica', 'Arial', sans-serif;
   box-sizing: border-box;
@@ -237,9 +231,9 @@ h1 {
 }
 
 div.items {
-  font-size: clamp(14px, 1.5vw, medium);
-  margin: 10px;
-  padding: 20px;
+  font-size: clamp(10px, 1.5vw, medium);
+  margin: 1vmin;
+  padding: 2vmin;
   border-radius: 10px;
   background-color: rgb(255, 200, 228);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -256,7 +250,7 @@ div.items>div {
 }
 
 .id {
-  font-size: clamp(12px, 2vw, 16px);
+  font-size: clamp(10px, 2vw, 16px);
   font-weight: bold;
 }
 
@@ -290,8 +284,8 @@ div.items>div {
 .lyrics {
   white-space: pre-line;
   width: 100%;
-  font-size: clamp(16px, 2.5vmin, 20px);
-  padding-left: 10px;
+  font-size: clamp(12px, 2.5vmin, 20px);
+  padding-left: 0.5vmin;
   line-height: 180%;
 }
 
@@ -301,13 +295,13 @@ div.items>div {
   align-items: flex-end;
   margin-left: auto;
   margin-right: 2.5vw;
-  max-width: 75%;
+  max-width: 70%;
   margin-top: 2vw;
   margin-bottom: 2vw;
 }
 
 #songName {
-  font-size: clamp(20px, 6vw, 64px);
+  font-size: clamp(16px, 6vw, 64px);
   font-weight: bold;
   margin-bottom: -0.2vw;
   margin-top: -0.1vw;
@@ -319,7 +313,7 @@ div.items>div {
 }
 
 #artists {
-  font-size: clamp(12px, 2.5vw, 28px);
+  font-size: clamp(10px, 2.5vw, 28px);
   margin-top: -0.1vw;
   color: black;
   text-align: right;
@@ -331,7 +325,7 @@ div.items>div {
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 2vmin;
   display: flex;
   flex-direction: column;
 }
@@ -344,10 +338,10 @@ div.items>div {
 }
 
 .insideAcrdn {
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  margin-top: 1vmin;
+  padding-left: 1vmin;
+  padding-right: 1vmin;
+  padding-bottom: 1vmin;
   border-radius: 10px;
   width: 100%;
 }
