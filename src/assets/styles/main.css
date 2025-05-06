@@ -99,6 +99,12 @@ h1 {
   font-weight: 600;
   font-size: clamp(36px, 4.8vw, 60px);
   padding-top: 10px;
+  transition: all 0.2s ease;
+}
+
+#accordion-heading-back:hover {
+  transform: scale(1.1);
+  color: hotpink;
 }
 
 #accordion-heading-name {
@@ -147,7 +153,11 @@ h1 {
   color:rgb(255, 150, 204);
 }
 
-#playlist-name-heading {
+#accordion-heading-name {
+  color:rgb(255, 200, 228);
+}
+
+#accordion-heading-back {
   color:rgb(255, 200, 228);
 }
 
@@ -212,7 +222,7 @@ div.items {
   border-radius: 10px;
   background-color: rgb(255, 200, 228);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   width: 100%;
 }
 
