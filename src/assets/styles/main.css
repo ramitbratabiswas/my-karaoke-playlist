@@ -120,6 +120,19 @@ h1 {
   font-size: clamp(48px, 6vw, 72px);
 }
 
+.accordion-init-loading {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+}
+
+.accordion-init-loading-text {
+  color: white;
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 28px);
+  vertical-align: center;
+}
+
 .white {
   color: white;
 }

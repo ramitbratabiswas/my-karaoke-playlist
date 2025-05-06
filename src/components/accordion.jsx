@@ -52,7 +52,7 @@ export default function Accordion({ data }) {
                   }</div>
                 </div>
               </div>
-            )) : <div>No data found!</div>
+            )) : <div className="accordion-init-loading"><p className="accordion-init-loading-text">loading ...</p></div>
         }
       </div>
     </div>

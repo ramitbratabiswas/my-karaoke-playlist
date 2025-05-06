@@ -10,15 +10,13 @@ export default function MyPlaylists() {
       <h1 id="your-playlists-heading">my playlists</h1>
       <div className="playlistList">
         {userPlaylists.map((playlist, index) => {
-          return (<>
-            <Link key={index} id="userCard" className="playlistCards" to={`/lyrics/${playlist.id}`}>
+          return (<Link key={index} id="userCard" className="playlistCards" to={`/lyrics/${playlist.id}`}>
               <div>
                 <img className="playlist-image" src={playlist.imgUrl} />
                 <p className="playlist-name">{playlist.name}</p>
                 <p className="playlist-description">{playlist.description}</p>
               </div>
-            </Link>
-          </>);
+            </Link>);
         })}
       </div>
     </div>
