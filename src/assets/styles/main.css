@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   z-index: 2;
+  /* border: solid red; */
 }
 
 html {
@@ -259,6 +260,9 @@ div.items>div {
   align-items: flex-end;
   margin-left: auto;
   margin-right: 2.5vw;
+  max-width: 70%;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
 }
 
 #songName {
@@ -279,6 +283,7 @@ div.items>div {
   color: black;
   text-align: right;
   margin-right: 0.3vw;
+  margin-bottom: 0.5vh;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;

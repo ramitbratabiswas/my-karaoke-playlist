@@ -6,6 +6,7 @@ export default function Accordion({ data }) {
 
   const { name, tracks } = data;
 
+  // selected denotes the index of the selected track
   const [selected, setSelected] = useState(-1);
 
   let [lyrics, loading] = useScrapeLyrics(selected > 0 ? tracks[selected-1].song : "", selected > 0 ? tracks[selected-1].artist : []);
