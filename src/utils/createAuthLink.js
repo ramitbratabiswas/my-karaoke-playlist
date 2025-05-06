@@ -3,8 +3,7 @@ import crypto from 'crypto-browserify';
 export const createAuthLink = () => {
 
   const client_id = import.meta.env.VITE_CLIENT_ID;
-  const redirect_uri = 'https://mykaraokeplaylist.netlify.app/callback';
-  // const redirect_uri = 'http://localhost:5173/callback';
+  const redirect_uri = (import.meta.env.DEV) ? 'http://localhost:5173/callback' : 'https://mykaraokeplaylist.netlify.app/callback';
 
   const state = generateRandomString(16);
   const scope = `playlist-read-private
