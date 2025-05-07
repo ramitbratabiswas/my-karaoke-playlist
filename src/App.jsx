@@ -12,6 +12,7 @@ import Recents from './pages/recents.jsx';
 import TopShort from './pages/topShort.jsx';
 import TopMedium from './pages/topMedium.jsx';
 import TopLong from './pages/topLong.jsx';
+import SearchResults from './pages/search.jsx';
 
 export const App = () => {
 
@@ -47,6 +48,7 @@ export const App = () => {
         <Route path="/lyrics/:id" element={<PlaylistLyrics />} />
         <Route path="/callback/*" element={<SpotifyCallback />} />
         <Route path="/queue" element={<Queue />} />
+        <Route path="/search" element={<SearchResults/>} />
         <Route path="/recents" element={<Recents />} />
         <Route path="/topshort" element={<TopShort />} />
         <Route path="/topmedium" element={<TopMedium />} />
