@@ -249,6 +249,45 @@ div.items>div {
   padding: 5px;
 }
 
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.search-form input {
+  all: unset;
+  border-bottom: 0.5vh solid gray;
+  padding: 1vw 2vw;
+  width: 70vw;
+  font-size: clamp(12px, 2vw, 24px);
+  color: white;
+  background: none;
+}
+
+.search-form input:hover {
+  border-bottom: 0.5vh solid rgb(255, 187, 230);
+}
+
+.search-form input:focus {
+  border-bottom: 0.5vh solid hotpink;
+}
+
+.search-form button {
+  all: unset;
+  background-color: hotpink;
+  padding: 1vw 1.4vw;
+  font-size: clamp(12px, 2vw, 24px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 100%;
+}
+
+.search-form button:hover {
+  transform: scale(1.05);
+}
+
 .id {
   font-size: clamp(10px, 2vw, 16px);
   font-weight: bold;

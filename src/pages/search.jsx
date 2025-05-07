@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Accordion from "../components/accordion";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useFetchSearchResults } from "../utils/fetchSearchResults";
 
@@ -35,14 +35,14 @@ export default function SearchResults() {
       <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
-          placeholder="Search tracks..."
+          placeholder="search for a track to start..."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button type="submit">Search</button>
+        <button type="submit"><FontAwesomeIcon icon={faSearch}/></button>
       </form>
 
-      {term === "" ? <div></div>: <Accordion data={data} />}
+      {term !== "" && <Accordion data={data} />}
     </div>
   );
 }
