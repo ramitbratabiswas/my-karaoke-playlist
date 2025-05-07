@@ -46,7 +46,7 @@ export const useFetchSearchResults = (searchTerm) => {
 
         setSearchData({
           name: "search",
-          data
+          tracks
         });
 
       } catch (error) {
