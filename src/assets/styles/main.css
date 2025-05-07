@@ -202,15 +202,21 @@ h1 {
   flex-wrap: wrap;
 }
 
+#search-music-redirector {
+  padding: 1vw 1.28vw;
+  border-radius: 100%;
+}
+
 .user-music-redirector {
   background-color: rgb(74, 110, 231); /* Background color of the buttons */
   color: #fff; /* Text color */
-  padding: 14px 22px; /* Padding inside the buttons */
-  border-radius: 50px; /* Completely rounded sides */
+  padding: 1vw 2vw; /* Padding inside the buttons */
+  border-radius: 5vw; /* Completely rounded sides */
   text-align: center; /* Center text inside the button */
   cursor: pointer; /* Pointer cursor on hover */
   font-size: clamp(14px, 1.6vw, 20px); /* Font size for the text */
   font-weight: 500; /* Font weight for the text */
+  transition: all 0.2s ease;
 }
 
 .user-music-redirector a {
@@ -280,7 +286,7 @@ div.items>div {
   padding: 1vw 1.4vw;
   font-size: clamp(12px, 2vw, 24px);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   border-radius: 100%;
 }
 

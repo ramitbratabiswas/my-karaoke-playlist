@@ -8,7 +8,7 @@ export default function MyMusic() {
   return (
     <div className="mymusic-container">
       <ul className="user-music-bar">
-        <li className="user-music-redirector">
+        <li className="user-music-redirector" id="search-music-redirector">
           <Link to="/search">
             <FontAwesomeIcon icon={faSearch}/>
           </Link>
