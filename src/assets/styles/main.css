@@ -114,6 +114,33 @@ h1 {
   font-size: clamp(48px, 6vw, 72px);
 }
 
+.accordion-filter-bar {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1vw;
+  margin: 1vw;
+  
+}
+
+.accordion-filter-bar input {
+  all: unset;
+  border-bottom: 0.3vh solid gray;
+  margin-right: 3vw;
+  padding: 1vw 1vw;
+  width: 40vw;
+  font-size: clamp(10px, 1.4vw, 16px);
+  color: white;
+  background: none;
+}
+
+.accordion-filter-bar input:hover {
+  border-bottom: 0.3vh solid rgb(255, 187, 230);
+}
+
+.accordion-filter-bar input:focus {
+  border-bottom: 0.3vh solid hotpink;
+}
+
 .accordion-init-loading {
   display: flex;
   height: 80vh;
@@ -283,7 +310,8 @@ div.items>div {
 .search-form button {
   all: unset;
   background-color: hotpink;
-  padding: 1vw 1.4vw;
+  padding: 1vw 1.5vw;
+  aspect-ratio: 1;
   font-size: clamp(12px, 2vw, 24px);
   cursor: pointer;
   transition: all 0.2s ease;

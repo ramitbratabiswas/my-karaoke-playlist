@@ -13,7 +13,7 @@ export const useFetchPlaylistData = (id) => {
       if (!token || !id) return;
 
       try {
-        // 1. Fetch metadata (name + total track count)
+        // 1. Fetch metadata
         const playlistRes = await fetch(`https://api.spotify.com/v1/playlists/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`
@@ -41,22 +41,23 @@ export const useFetchPlaylistData = (id) => {
 
         const pagesData = await Promise.all(pagePromises);
 
-        // 3. Flatten and parse all track items
-        const allTracks = pagesData.flatMap((data, i) =>
+        // 3. Flatten and parse with manual counter
+        let counter = 1;
+        const allTracks = pagesData.flatMap((data) =>
           data.items
             .filter(item => item.track)
-            .map((item, j) => {
+            .map((item) => {
               let songName = item.track.name;
               const songId = item.track.id;
               const songImage = item.track.album?.images?.[0]?.url || '';
-              
+
               if (songName.toLowerCase().includes('(feat')) {
                 const featIndex = songName.toLowerCase().indexOf('(feat');
                 songName = songName.substring(0, featIndex - 1);
               }
 
               return {
-                id: i * limit + j + 1,
+                id: counter++,
                 song: songName,
                 artist: item.track.artists.map((a) => a.name),
                 trackId: songId,

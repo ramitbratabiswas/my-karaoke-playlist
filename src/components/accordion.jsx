@@ -41,14 +41,14 @@ export default function Accordion({ data }) {
         </div>
       )}
 
-      <div className="accordion-filter-bar">
+      {name && <div className="accordion-filter-bar">
         <input
           type="text"
-          placeholder="Filter by song or artist..."
+          placeholder="search in results..."
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
-      </div>
+      </div>}
 
       <div className="wrapper accordion">
         {filteredTracks.length > 0 ? (

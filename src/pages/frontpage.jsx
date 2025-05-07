@@ -11,7 +11,7 @@ export default function Frontpage() {
       <div className="subtagline">
         <h1 className="subtagline-text">
           <a href={authLink}>
-            <span className="home-link link-1">log in to spotify</span>
+            <span className="home-link link-1">log in to spotify to begin!</span>
           </a>
         </h1>
       </div>
