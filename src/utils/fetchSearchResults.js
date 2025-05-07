@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export const useFetchSearchResults = (searchTerm) => {
   const [searchData, setSearchData] = useState({
     name: null,
-    data: []
+    tracks: []
   });
 
   const accessToken = localStorage.getItem("access_token");

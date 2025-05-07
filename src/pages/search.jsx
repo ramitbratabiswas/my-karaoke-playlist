@@ -42,7 +42,7 @@ export default function SearchResults() {
         <button type="submit"><FontAwesomeIcon icon={faSearch}/></button>
       </form>
 
-      {term !== "" && <Accordion data={data} />}
+      {term !== "" && data && <Accordion data={data} />}
     </div>
   );
 }
