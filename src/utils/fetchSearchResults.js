@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export const useFetchSearchResults = (searchTerm) => {
   const [searchData, setSearchData] = useState({
-    name: 'search',
+    name: null,
     data: []
   });
 
@@ -45,7 +45,7 @@ export const useFetchSearchResults = (searchTerm) => {
         }) || [];
 
         setSearchData({
-          name: "search",
+          name: null,
           tracks
         });
 
